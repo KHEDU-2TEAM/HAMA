@@ -1,0 +1,534 @@
+*{  
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+@font-face {
+    font-family: 'GyeonggiBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+        }
+@font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+      /* 전체 틀 = 1 : content : 1     */
+.container {
+   display: grid;
+   grid-template-columns: 1fr 1024px 1fr;
+   grid-template-rows: 100px 200px 700px  auto 300px;
+   grid-template-areas:
+      "header header header"
+      "u1 util u2"
+      "sec1 sec2 sec3"
+      ". main   ."
+      ". footer ."; 
+      background-color: #fcfcfc;
+}
+*{
+   /* outline: 1px solid red; */
+   font-family: LINESeedKR-Bd;
+   font-weight: bold;
+}
+/* 헤더시작 */
+.header{
+   display: grid;
+   grid-area: header;
+   grid-template-areas: ". header2 .";
+   grid-template-columns: 1fr 1024px 1fr;
+   background-color: #fff;
+   top: 0;
+   position: sticky;
+   z-index: 1;
+   border-bottom: 2px solid #f2f2f2;
+   
+} 
+/* 헤더 요소들 (가운데) */
+.headers{
+   background-color: #FFF;
+   display: grid;
+   grid-area: header2;
+   grid-template-areas: "logo gnb . login";
+   grid-template-columns: repeat(3,1fr);
+   
+}
+/* 로고 */
+.header .logo_loggo{
+   grid-area: logo;
+   display: flex;
+   justify-content: start;
+   align-items: center;
+}
+/* 로그인 회원가입 */
+.header .login_signup{
+   grid-area: login;
+   display: flex;
+   justify-content: end;
+   align-items: center;
+}
+/* 채팅 오른쪽 마진 */
+.header .login_signup .login:nth-of-type(4){
+   margin-right: 20px;
+}
+/* gnb */
+.header .gnb{
+   grid-area: gnb;
+   width: 550px;
+}
+.header .gnb .menu{
+   display: flex;
+   margin-top: 30px;
+   border: none;
+}
+
+/* gnb 세부 */
+ul{
+   list-style:none;
+}
+a{
+   text-decoration:none; color:#333;
+}
+.menu:after{
+   display:block; content:''; clear:both;
+}
+.menu > li{
+   position:relative; float:left; margin-right:10px; width: 120px;
+text-align: center;
+}
+.menu > li > a{
+   display:block; padding:0; background:#fff; height:40px; line-height:40px; color:#000; border-radius: 50%; font-size: 1.2rem;
+}
+.menu > li:hover .depth_1 {
+   display:block;
+}
+.menu .depth_1{
+   display:none; position:absolute; left:0; right:0; text-align:center;
+padding: 0; margin: 0;
+}
+.menu .depth_1 a{
+   display:block; padding:5px; background:#666; color:#fff;
+}
+
+/* 로그인,회원가입 */
+.header .login_signup .login{
+    
+    border-radius: 40%;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 10px;
+    
+}
+/* 맨 오른쪽 헤더 아이콘 */
+i.fa-solid.fa-user{
+   font-size: 30px;
+   color: gray;
+   position: relative;
+   top: 10px;
+}
+/* login2 = (받은요청 받은견적 채팅 아이콘) */
+.header .login_signup .login2{
+   display: flex;
+   align-items: center;
+   margin-bottom: 5px;
+}
+.header .login_signup .login2:after{
+   display:block; content:''; clear:both;
+}
+.header .login_signup .login2 > li{
+   position:relative; float:left; margin-right:10px; width: 50px;
+text-align: center; list-style: none;
+}
+
+.header .login_signup .login2 > li > a{
+   display:block; padding:0; border: 1px solid gray; height: 50px;line-height:40px; color:#fff; border-radius: 50%; align-items: center;
+}
+.header .login_signup .login2 > li:hover .depth_1 {
+   display:block;
+}
+.header .login_signup .login2 .depth_1{
+   display:none; position:absolute; left:0; right:0; text-align:center;
+padding: 0; margin: 0; width: 120px; background-color: #fff; z-index: 1;
+}
+.header .login_signup .login2 .depth_1 a{
+   display:block; padding:5px; background:#666; color:#fff;
+}
+.header .login_signup .login2 .depth_1 p{
+   margin: 5px;
+   padding: 0;
+}
+
+/* .gnb{
+   background-color: rgb(208, 208, 208);
+   grid-area: gnb;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.gnb ul{
+    font-family: GyeonggiBatang;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+   list-style: none;
+   padding-left: 0;
+   border: none;
+}
+.gnb ul>*{
+    margin: 15px;
+} */
+
+/* a 태그 클릭시 액션들 */
+a:link {
+    text-decoration: none;
+    }
+
+    a:visited {
+    color : black;
+    text-decoration: none;
+    }
+
+    a:hover {
+    color : blue;
+    text-decoration: underline;
+    }
+/* 편의시설 가이드라인 */
+.util{
+   grid-area: util;
+   display: grid;
+   grid-template-areas:"util guide" 
+                       "left right";
+   grid-template-columns: 1fr 1fr;
+   font-weight: bold;
+   
+}
+.u1{
+   grid-area: u1;
+}
+.u2{
+   grid-area: u2;
+}
+/* 유틸 제목들 */
+.util .util_text{
+   grid-area: util;
+   display: flex;
+   justify-content: start;
+   align-items: center;
+   font-size: 1.3rem;
+}
+.util .util_guide{
+   grid-area: guide;
+   display: flex;
+   justify-content: start;
+   align-items: center;
+   font-size: 1.3rem;
+}
+/* 말풍선 */
+.util .util_chat{position:relative; 
+                margin-top: 10px; 
+                margin-right: 10px;
+                padding: 10px; 
+                width:130px; 
+                height:40px; 
+                color: #FFF; 
+                border-radius: 10px; 
+                background-color: #000;
+                font-size: 13px;
+                text-align: left;
+   }
+.util .util_chat:after {content:""; 
+                       position: absolute;
+                       top: 4px; 
+                       right: -10px; 
+                       border-left: 30px solid #000; 
+                       border-top: 10px solid transparent; border-bottom: 10px solid transparent;}
+/* 유틸 왼쪽 편의시설 */
+.util .util_left{
+   grid-area: left;
+   display: flex;
+   justify-content: center;
+}
+.util .util_left .restroom{
+   margin-right: 30px;
+}
+.util .util_left .restroom:hover{
+   transform: scale(1.05);
+}
+.util .util_left .restroom img{
+   width: 71px;
+   margin: 5px;
+   padding-left: 5px;
+}
+.util .util_left .restroom img,
+.util .util_left .mart img{
+   margin-left: 9px;
+}
+.util .util_left .mart{
+   margin-right: 30px;
+}
+.util .util_left .mart:hover{
+   transform: scale(1.05);
+}
+/* 유틸 오른쪽 가이드 */
+.util .util_right{
+   grid-area: right;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+span{
+    font-size: 18px;
+    
+}
+.util .util_right .R_button{
+   border-radius: 50%;
+   height: 90px;
+   margin-right: 15px;
+}
+.util .util_right .R_button:hover{
+    background-color: rgb(180, 180, 180);
+}
+
+.util .util_right .guide{
+   display: flex;
+}
+/* 섹션 메인 아이콘들 연필과 달력 */
+i.fa-solid.fa-pencil,
+i.fa-regular.fa-calendar-check{
+   font-size: 16rem;
+}
+/* 섹션 배경 */
+.sec1,
+.sec2,
+.sec3{
+   background-color: #e6e1dd;
+}
+.sec2{
+   grid-area: sec2;
+}
+.main{
+  grid-area: main;
+  
+}
+/* 견적요청 게시판라인 */
+.sec2 .section{
+   display: grid;
+   grid-template-areas: "left right";
+   height: 600px;
+   
+}
+.sec2 .section .section_left{
+   grid-area: left;
+   display: flex;
+   width: 510px;
+   justify-content: center;
+   align-items: center;
+   
+}
+.sec2 .section .section_left .sec1_text{
+   z-index: 1;
+   
+   text-align: center;
+   
+}
+.sec2 .section .section_left:hover{
+   transform: scale(1.1);
+}
+.sec2 .section .section_right:hover{
+   transform: scale(1.1);
+}
+.sec2 .section .section_right{
+   grid-area: right;
+   width: 510px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   
+}
+/* 하마찾기 요청게시판 커뮤니티 섹션1은 없음 섹션2는 하마찾기 요청게시판 섹션3는 커뮤니티 */
+/* 하마찾기 요청게시판 커뮤니티 섹션1은 없음 섹션2는 하마찾기 요청게시판 섹션3는 커뮤니티 */
+/* 하마찾기 요청게시판 커뮤니티 섹션1은 없음 섹션2는 하마찾기 요청게시판 섹션3는 커뮤니티 */
+/* 하마찾기 요청게시판 커뮤니티 섹션1은 없음 섹션2는 하마찾기 요청게시판 섹션3는 커뮤니티 */
+.main .section{
+   display: grid;
+   grid-template-areas: "left right";
+   height: 600px;
+   
+}
+/* 하마찾기 */
+.main .section .section_left{
+   grid-area: left;
+   display: flex;
+   width: 510px;
+   justify-content: center;
+   align-items: center;
+   
+}
+.main .section .section_left .sec1_text{
+   z-index: 1;
+   
+   text-align: center;
+   
+}
+.main .section .section_left:hover{
+   transform: scale(1.1);
+}
+.main .section .section_right:hover{
+   transform: scale(1.1);
+}
+.main .section .section_right{
+   grid-area: right;
+   width: 510px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   
+}
+.main .section2 .section2_left .section2_text .item2{
+   margin-top: 20px;
+   margin-right: 15px;
+}
+.main .section2 .section2_left .section2_text .item1,
+.main .section2 .section2_right .section2_text .item1,
+.main .section3 .section3_right .section3_text .item1{
+   margin: 10px;
+   font-size: 1.3rem;
+}
+.main .section3 .section3_left{
+  margin-top: 40px;
+}
+.main .section3{
+   margin-top: 100px;
+}
+
+
+.main .section3 .section3_left > * {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   font-size: 1.5rem;
+   margin: 40px;
+   margin-bottom: 40px;
+   text-align: center;
+   width: 150px;
+   height: 70px;
+   background-color: rgb(208, 208, 208);
+}
+.main .section3 .section3_left > *:hover {
+   background-color: rgb(160, 160, 160);
+}
+
+h1{
+    font-size:3rem;
+}
+.main .section2{
+   display: grid;
+   grid-template-areas: "left right";
+   margin-top: 70px;
+}
+.main .section2 .section2_left{
+   grid-area: left;
+   width: 480px;
+
+}
+.main .section2 .section2_right{
+   grid-area: right;
+   width: 480px;
+}
+.main .section2 .section2_left .section2_text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main .section2 .section2_left .section2_text .item1{
+    font-weight: bold;
+    margin: 10px;
+}
+
+.main .section2 .section2_left .item3 .find_pro1,
+.main .section2 .section2_right .item3 .find_pro1,
+.main .section3 .item3 .find_pro1
+{
+    display: flex;
+    height: 140px;
+}
+.main .section2 .section2_left .item3 .find_pro1 ul,
+.main .section2 .section2_right .item3 .find_pro1 ul,
+.main .section3 .item3 .find_pro1 ul{
+    list-style: none;
+    padding-left: 0;
+.box1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+    
+}
+.main .section2 .section2_left .item3 .find_pro1 .pic,
+.main .section2 .section2_right .item3 .find_pro1 .pic,
+.main .section3 .item3 .find_pro1 .pic{
+    display: flex;
+    width: 90px;
+    
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+.section3{
+    display: flex;
+}
+.box1{
+    font-size: 4rem;
+    margin: 5px;
+}
+.section2 li{
+    width: 350px;
+}
+.section3 .section3_right .item3 .find_pro1 li{
+    width: 600px;
+}
+/* 푸터 */
+.footer{
+   grid-area: footer;
+   font-size: 12px;
+   margin-top: 70px;
+   
+   
+   background-color: rgb(208, 208, 208);
+}
+.footer .footer_top {
+   display: flex;
+   justify-content: space-around;
+   align-items: start;
+}
+.footer .footer_top .item2 ul{
+   list-style: none;
+   padding-left: 0;
+}
+.footer .footer_top .item2 >*{
+   border: none;
+}
+.footer .footer_top .item2 p,
+.footer .footer_top .item3 p,
+.footer .footer_top .item4 p
+{
+   font-size: 14px;
+}
+.footer .footer_top .item3 .text3_box3{
+   font-size: 20px;
+}
+.footer .footer_bot .item6 {
+   font-size: 10px;
+   text-align: center;
+}
+ul{
+   border: 1px solid gray;
+}
+
+

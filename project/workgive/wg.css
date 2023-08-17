@@ -1,0 +1,204 @@
+*{
+    letter-spacing: 1px;
+    line-height: 20px;
+    outline: 1px solid red;
+}
+@font-face {
+    font-family: 'GyeonggiBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+        }
+.container {
+   display: grid;
+   grid-template-columns: 1fr 1024px 1fr;
+   grid-template-rows: 100px 50px 150px  auto 200px;
+   grid-template-areas:
+      ". header ."
+      ". gnb    ."
+      ". util   ."
+      ". main   ."
+      ". footer ."; 
+}
+*{
+   /* outline: 1px solid red; */
+   font-family: GyeonggiBatang;
+   font-weight: bold;
+}
+.header{
+   grid-area: header;
+   display: grid;
+   grid-template-areas: ". logo login";
+   grid-template-columns: repeat(3,1fr);
+}
+.header .logo_loggo{
+   grid-area: logo;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.header .login_signup{
+   grid-area: login;
+   display: flex;
+   justify-content: end;
+   align-items: end;
+}
+.header .login_signup .login{
+    background-color: black;
+    color: white;
+    border-radius: 20%;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px;
+}
+.gnb{
+   background-color: rgb(208, 208, 208);
+   grid-area: gnb;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.gnb ul{
+    font-family: GyeonggiBatang;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+   list-style: none;
+   padding-left: 0;
+   border: none;
+}
+.gnb ul>*{
+    margin: 15px;
+}
+
+a:link {
+    text-decoration: none;
+    }
+
+    a:visited {
+    color : black;
+    text-decoration: none;
+    }
+
+    a:hover {
+    color : black;
+    text-decoration: underline;
+    }
+    
+.util{
+   grid-area: util;
+   display: grid;
+   grid-template-areas:"util guide" 
+                       "left right";
+   grid-template-columns: 1fr 1fr;
+   font-weight: bold;
+}
+.util .util_text{
+   grid-area: util;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.util .util_guide{
+   grid-area: guide;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.util .util_chat{position:relative; 
+                margin-top: 10px; 
+                margin-right: 10px;
+                padding: 10px; 
+                width:130px; 
+                height:40px; 
+                color: #FFF; 
+                border-radius: 10px; 
+                background-color: #000;
+                font-size: 13px;
+                text-align: left;
+   }
+.util .util_chat:after {content:""; 
+                       position: absolute;
+                       top: 4px; 
+                       right: -10px; 
+                       border-left: 30px solid #000; 
+                       border-top: 10px solid transparent; border-bottom: 10px solid transparent;}
+.util .util_left{
+   grid-area: left;
+   display: flex;
+   justify-content: center;
+}
+.util .util_left .restroom{
+   margin-right: 30px;
+}
+.util .util_left .restroom img{
+   width: 71px;
+   margin: 5px;
+   padding-left: 5px;
+}
+.util .util_left .restroom img,
+.util .util_left .mart img{
+   margin-left: 9px;
+}
+.util .util_left .mart{
+    margin-right: 30px;
+}
+.util .util_right{
+   grid-area: right;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+span{
+    font-size: 18px;
+    
+}
+.util .util_right .R_button{
+   border-radius: 50%;
+   height: 90px;
+   margin-right: 15px;
+}
+.util .util_right .R_button:hover{
+    background-color: rgb(180, 180, 180);
+}
+
+.util .util_right .guide{
+   display: flex;
+}
+
+.main .item_box_top{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 150px;
+}
+.main .item_box_top > *{
+    width: 100px;
+    height: 100px;
+}
+
+.main{
+    grid-area: main;
+    
+}
+.main .item_box_bottom{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    justify-items: center;
+    box-sizing: border-box;
+}
+.main .item_box_bottom > *{
+    width: 300px;
+    height: 200px;
+}
+.main .button{
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+}
+.main .button .next{
+    width: 200px;
+    height: 100px;
+}
