@@ -29,6 +29,7 @@
             /* 카카오톡 버튼 배경 */
         }
 
+        /* 전체 메인 */
         .main {
             padding: 100px;
             display: flex;
@@ -37,27 +38,32 @@
             align-items: center;
         }
 
+        /* 회원가입 텍스트 상자 */
         .main .title {
             padding: 20px;
             text-align: center;
         }
 
+        /* 닉네임+이메일+비밀번호+재확인 */
         .main .forms {
             padding: 20px;
             margin: 30px;
+            margin-top: 10px;
         }
-
+        
+        /* 연보라 선 상자 */
         .container {
             outline: 1px solid #CCCCFF;
             border-radius: 5%;
-            padding: 10px 20px 150px;
+            padding: 60px 20px;
         }
 
+        /* 닉네임+이메일+비밀번호+재확인 각 상자 */
         .form {
-            margin-top: 10px;
             margin-bottom: 10px;
         }
 
+        /* 닉네임+이메일+비밀번호+재확인 인풋 위치 */
         .txt {
             height: 20px;
             width: 320px;
@@ -66,31 +72,34 @@
             font-size: 15px;
         }
 
+        /* 중복확인(제출버튼) */
         .form .submit {
             margin-left: 20px;
             padding: 4px;
             height: 35px;
         }
 
+        /* 약관(전체+개별) */
         .main .check {
-            /* background-color: gold; */
-            height: 200px;
-            padding: 10px;
             padding-left: 50px;
             padding-right: 30px;
             display: flex;
             flex-direction: column;
         }
-
+        
+        /* 전체 약관 */
         .main .check .all {
             margin: 5px;
         }
-
+        
+        /* 개별 약관 */
         .main .check .each {
             margin: 10px;
+            margin-top: 5px;
             margin-left: 15px;
         }
-
+        
+        /* 개별약관 1+2+3 (동의+자세히) */
         .each1,
         .each2,
         .each3 {
@@ -98,7 +107,8 @@
             flex-direction: row;
             justify-content: space-between;
         }
-
+        
+        /* 버튼 자리 */
         .main .buttons {
             display: flex;
             flex-direction: column;
@@ -106,7 +116,8 @@
             justify-content: center;
             align-items: center;
         }
-
+        
+        /* 회원가입 + 카카오가입 버튼 */
         .main .buttons .btn,
         .btn_kakao {
             height: 50px;
@@ -120,11 +131,12 @@
             justify-content: center;
             align-items: center;
         }
-
-        .footer {
-            background-color: #eee;
+        .main .buttons .btn:hover,
+        .btn_kakao:hover{
+            outline: 1px solid #2A2F57;
         }
-    </style>
+        </style>
+
     <script>
         // 체크 박스 클릭 이벤트 처리 함수
         function toggleCheckbox(checkbox) {
@@ -221,11 +233,12 @@
                         <span><a href=""> 자세히</a></span>
                     </div>
                 </div>
-                <div class="buttons">
-                    <input class="btn sign" type="submit" value="회원가입">
-                    <div class="btn kakao"><a href="#"><span>카카오로 가입하기</span></a></div>
-                </div>
             </div>
+            <div class="buttons">
+                <input class="btn sign" type="submit" value="회원가입">
+                <div class="btn kakao"><a href="#"><span>카카오로 가입하기</span></a></div>
+            </div>
+
         </div>
     </div>
     <div class="footer">
