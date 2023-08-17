@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <script src="https://kit.fontawesome.com/ba16334cfd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/ba16334cfd.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="./footer.css">
+    <style>
+        * {
+            /* outline: 1px solid gray; */
+            margin: 0;
+            padding: 0;
+            color: #2A2F57;
+        }
+
+        /* 컬러 */
+        :root {
+            --color-font1: #2A2F57;
+            /* 글자색 */
+            --color-font2: #381B1B;
+            /* 카카오톡 글자색 */
+
+            --color-bg1: #CCCCFF;
+            /* 배경색 */
+            --color-bg2: #F1D900;
+            /* 카카오톡 버튼 배경 */
+        }
+
+        .main {
+            padding: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main .title {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .main .forms {
+            padding: 20px;
+            margin: 30px;
+        }
+
+        .container {
+            outline: 1px solid #CCCCFF;
+            border-radius: 5%;
+            padding: 10px 20px 150px;
+        }
+
+        .form {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .txt {
+            height: 20px;
+            width: 320px;
+            padding: 5px;
+            margin-top: 5px;
+            font-size: 15px;
+        }
+
+        .form .submit {
+            margin-left: 20px;
+            padding: 4px;
+            height: 35px;
+        }
+
+        .main .check {
+            /* background-color: gold; */
+            height: 200px;
+            padding: 10px;
+            padding-left: 50px;
+            padding-right: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main .check .all {
+            margin: 5px;
+        }
+
+        .main .check .each {
+            margin: 10px;
+            margin-left: 15px;
+        }
+
+        .each1,
+        .each2,
+        .each3 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .main .buttons {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main .buttons .btn,
+        .btn_kakao {
+            height: 50px;
+            width: 400px;
+            margin: 10px 0;
+            text-align: center;
+            font-size: larger;
+            background-color: #CCCCFF;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer {
+            background-color: #eee;
+        }
+    </style>
+    <script>
+        // 체크 박스 클릭 이벤트 처리 함수
+        function toggleCheckbox(checkbox) {
+            const icon = checkbox.querySelector(".fa-regular");
+            if (icon.classList.contains("fa-square")) {
+                icon.classList.remove("fa-square");
+                icon.classList.add("fa-square-check");
+            } else {
+                icon.classList.remove("fa-square-check");
+                icon.classList.add("fa-square");
+            }
+        }
+
+        // 전체 동의 체크 박스 클릭 이벤트 처리 함수
+        function toggleAllCheckboxes(checkbox) {
+            const allCheckbox = checkbox.querySelector(".fa-regular");
+            const eachCheckboxes = document.querySelectorAll(".each .fa-regular");
+
+            if (allCheckbox.classList.contains("fa-square")) {
+                allCheckbox.classList.remove("fa-square");
+                allCheckbox.classList.add("fa-square-check");
+
+                eachCheckboxes.forEach(function (icon) {
+                    icon.classList.remove("fa-square");
+                    icon.classList.add("fa-square-check");
+                });
+            } else {
+                allCheckbox.classList.remove("fa-square-check");
+                allCheckbox.classList.add("fa-square");
+
+                eachCheckboxes.forEach(function (icon) {
+                    icon.classList.remove("fa-square-check");
+                    icon.classList.add("fa-square");
+                });
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="banner"></div>
+        <div class="gnb"></div>
+    </div>
+    <div class="main">
+        <div class="title">
+            <h2>회&nbsp;&nbsp;&nbsp;&nbsp;원&nbsp;&nbsp;&nbsp;&nbsp;가&nbsp;&nbsp;&nbsp;&nbsp;입</h2>
+        </div>
+        <div class="container">
+            <div class="forms">
+                <div class="form nickname">
+                    <h4>닉네임</h4>
+                    <input class="txt txt_id" type="text" placeholder=" 닉네임(별명)을 입력하세요." name="nickname">
+                    <input class="submit" type="submit" value="중복확인">
+                </div>
+                <div class="form email">
+                    <h4>이메일</h4>
+                    <input class="txt txt_email" type="text" placeholder=" example@address.com" name="email">
+                    <input class="submit" type="submit" value="중복확인">
+                </div>
+                <div class="form password_1">
+                    <h4>비밀번호</h4>
+                    <input class="txt txt_pw1" type="text" placeholder=" 6~20자 이하로 입력하세요." name="pw1">
+                </div>
+                <div class="form password_2">
+                    <h4>비밀번호 확인</h4>
+                    <input class="txt txt_pw2" type="text" placeholder=" 비밀번호를 재입력하세요." name="pw2">
+                </div>
+            </div>
+            <div class="check">
+                <div class="all">
+                    <span class="checkbox" onclick="toggleAllCheckboxes(this)">
+                        <i class="fa-regular fa-square"></i>
+                        (필수) 전체 동의</span>
+                </div>
+                <div class="each">
+                    <div class="each each1">
+                        <span class="checkbox" onclick="toggleCheckbox(this)">
+                            <i class="fa-regular fa-square"></i>
+                            (필수) 이용약관 동의</span>
+                        <span><a href=""> 자세히</a></span>
+                    </div>
+                    <div class="each each2">
+                        <span class="checkbox" onclick="toggleCheckbox(this)">
+                            <i class="fa-regular fa-square"></i>
+                            (필수) 개인정보 수집 및 이용 동의</span>
+                        <span><a href=""> 자세히</a></span>
+                    </div>
+                    <div class="each each3">
+                        <span class="checkbox" onclick="toggleCheckbox(this)">
+                            <i class="fa-regular fa-square"></i>
+                            (필수) 14세 이상입니다.</span>
+                        <span><a href=""> 자세히</a></span>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <input class="btn sign" type="submit" value="회원가입">
+                    <div class="btn kakao"><a href="#"><span>카카오로 가입하기</span></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer_top">
+            <!-- 푸터 위쪽 고객센터, 회사정보 -->
+            <!-- 고객센터 part1 -->
+            <div class="item2">
+                <p class="cuscenter"><strong>고객센터</strong></p>
+                <ul class="policy">
+                    <li><a href="http://192.168.0.182:5500/project/customer/board.html">공지사항</a></li>
+                    <li><a href="#">1:1문의</a></li>
+                    <li><a href="http://192.168.0.182:5500/project/customer/question.html">자주묻는질문</a></li>
+                    <li><a href="#">우주하마</a></li>
+                </ul>
+            </div>
+            <!-- 고객센터 part2 -->
+            <div class="item3">
+                <div class="text3_box1">
+                    <p><strong>&nbsp;</strong></p>
+                </div>
+                <div class="text3_box2">
+                    평일 : 오전9:00~ 오후18:00<br>
+                    점심 : 오후12:00~ 오후13:00 토/일/공휴일 휴무</div>
+                <div class="text3_box3">
+                    <i class="fa-solid fa-phone"></i>
+                    <strong>070-1234-5678</strong>
+                </div>
+                <div class="text3_box4">
+                    국민은행 : 015-13413-123-01 (예금주 : 홍길동)<br>
+                    농협은행 : 15413-123-01 (예금주 : 홍길동)</div>
+            </div>
+            <!-- 회사정보 -->
+            <div class="item4">
+                <p><strong>회사정보</strong></p>
+                TEL:070-1234-5678 E-MAIL : WEBMASTER@HOTMAIL.COM<br>
+                ADDRESS1 : 서울 서초구 양재동 147-15번지 떡잎물산 418호<br>
+                BUSINESS LICENSE : 417-24-78612<br>
+                MAIL ORDER LICENSE : 제2022-서울서초-0817호
+                <br>
+                PERSONAL INFO MANAGER : 강감찬
+
+            </div>
+        </div>
+        <!-- 푸터 아래쪽 -->
+        <div class="footer_bot">
+            <!-- 맨 밑 문구 -->
+            <div class="item6">
+                <p>COPYRIGHTⓒ AIRMALL ALL RIGHT RESERVERD.DESIGNED BY TESTKOREA DESIGN 3.0 VERSION.
+
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
