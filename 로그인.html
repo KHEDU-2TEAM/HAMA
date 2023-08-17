@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+
+    <!--아이콘을 쓰기 위해-->
+    <script src="https://kit.fontawesome.com/68333565dc.js" crossorigin="anonymous"></script>
+
+    <style>
+
+        /* *{outline: 1px solid red;} */
+
+        *{
+            margin: 0; padding: 0;
+        }
+
+        /* 컬러 */
+        :root{
+            --color-font1 : #2A2F57; /* 글자색 */
+            --color-font2 : #381B1B; /* 카카오톡 글자색 */
+            
+            --color-bg1 : #CCCCFF;  /* 배경색 */
+            --color-bg2 : #F1D900;  /* 카카오톡 버튼 배경 */
+        }
+
+        /*리스트 점 없애기*/
+        ul{
+            list-style: none;
+        }
+
+        /*밑줄없애기*/
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .login{
+            display: flex;
+            justify-content: center;
+            height: 100vh; /*세로크기를 화면의 100%*/
+            align-items: center; /*y축 중앙 정렬*/
+        }
+
+
+        .login .form-wrap{
+            width: 300px;
+        }
+
+
+        /*블럭레벨인 form 태그를 세로로 나열하고 싶다면*/
+        .login .form{
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .login .form .form__row{
+            display: flex;
+            padding: 10px 10px;
+        }
+
+        /* 타이틀 */
+        .login .form .form__row:nth-of-type(1){
+            justify-content: center;
+            object-fit : contain;
+            align-items: end;
+        }
+
+        /**/
+        .login .form .form__row:nth-of-type(2),
+        .login .form .form__row:nth-of-type(3){
+            border: 1px solid var(--color-bg1);
+            border-radius: 5px;
+
+            
+        }
+        
+        /* 로그인 / 카카오톡 로그인 버튼 여백*/
+        .login .form .form__row:nth-of-type(4),
+        .login .form .form__row:nth-of-type(5){
+            padding: 5px 0;
+        }
+
+        /*아이디와 비밀번호의 아이콘 박스*/
+        .login .form .form__row i{
+            margin-right: 10px;
+        }
+
+        /*아이디와 비밀번호 박스*/
+        .login .form .form__row .from__item{
+            flex: 1; /*아이디와 비밀번호의 박스가 부모요소의 나머지 폭 공간을 차지*/
+            border: none; /* 평상시 외각선*/
+            outline: none; /* 클릭시 외각선 */
+        }
+
+
+       /*로그인 버튼*/
+        .login .form-wrap .form .form__btn{
+            width: 100%;  /*버튼의 크기가 부모요소의 폭 100%*/
+            height: 40px;
+            padding: 5px;
+            color: var(--color-font1);
+            border: 1px solid var(--color-bg1);
+            background-color: var(--color-bg1);
+            font-weight: bolder; /*폰트 사이즈 굵게(숫자도 가능)*/
+        }   
+
+
+        /* 카카오톡 로그인 버튼. 카카오톡 API 로그인 연동 시 삭제 */
+        .login .form-wrap .form .form__KAbtn{
+            width: 100%;  /*버튼의 크기가 부모요소의 폭 100%*/
+            height: 40px;
+            padding: 5px;
+            color: var(--color-font2);
+            border: 1px solid var(--color-bg2);
+            background-color: var(--color-bg2);
+            font-weight: bolder; /*폰트 사이즈 굵게(숫자도 가능)*/
+        }
+
+        .login .menu{
+            display: flex;
+            justify-content: space-around; /*부모컨테이너 안에서 가운데로*/
+            padding: 10px 0;
+            color: var(--color-font1);
+            font-size: 13px;
+        }
+
+        /*부모요소인 a의 위치를 잡아준다(가상요소인 딱지의 위치때문) */
+        .login .menu .item a{
+            position: relative;
+        }
+        /*가상요소의 위치를 잡아주기 위해 포지션을 absolute로 하여 z축으로 던져버리면
+        해당 가상요소는 스태틱이 아닌 부모요소의 위치를 따라가기 때문에(모든 부모요소들은 스태틱이 디폴트) 
+        가상요소의 부모인 a태그의 위치를 잡아줘야한다. */
+
+        /* 마우스를 올리면 밑줄이 생기게 */
+        .login .menu .item:hover a{
+            text-decoration: underline var(--color-bg1);
+        }
+
+        /*마우스를 올리면 메뉴에 가상의 요소가 생기게*/
+
+    </style>
+
+
+</head>
+<body>
+    
+    <div class="login"> 
+        <div class="form-wrap"><!--아이템이 2개 form/menu-->
+            
+            <!--
+            form.form>input.form__id+input.form__pw+input[type='submit'].btn
+            form : 블럭레벨
+            input : 인라인 -->
+            <form action="서버프로그램URL" class="form" method="get">
+
+                <!--로그인창 함께하마 타이틀-->
+                <div class="form__row">
+                    <img src="/html/DAY9/img/logo.png" alt=""
+                    width="300px" height="150px">
+                </div>
+
+                <!--아이디 입력 박스-->
+                <div class="form__row">
+                    <i class="fa-solid fa-user fa-bounce"></i> <!--아이디 아이콘-->
+
+                    <!--아이디 입력-->
+                    <input 
+                        type="text" 
+                        class="form__id from__item" 
+                        placeholder="이메일 아이디"
+                        name = 'id'/> 
+                </div>
+
+
+                <!--비밀번호 입력 박스-->
+                <div class="form__row">
+                    <i class="fa-solid fa-key fa-bounce"></i> <!--아이콘-->
+
+                    <!--비밀번호 입력-->
+                    <input 
+                        type="text" 
+                        class="form__pw from__item" 
+                        placeholder="비밀번호"
+                        name = 'pw'/> 
+                </div>
+                
+                <!--로그인 버튼-->
+                <div class="form__row">
+
+                    <input 
+                        type="submit" 
+                        value="로그인" 
+                        class="form__btn form__btn--disable"/> 
+                </div>
+
+                <div class="form__row">
+                    <input 
+                        type="submit" 
+                        value="카카오톡 로그인" 
+                        class="form__KAbtn form__btn--disable"/> 
+                </div>
+
+            </form>
+            
+            <!-- ul>li*3>a
+            순서가 없는 ul의 리스트3개의 a태그(링크) -->
+            <ul = class="menu">
+                <li class="item"><a href="#">회원가입</a></li>
+                <li class="item"><a href="#">아이디찾기</a></li>
+                <li class="item"><a href="#">비밀번호찾기</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- <script>
+
+        let formIdEle = document.querySelector('.form__id');
+        let tmp = document.querySelector('.login .form .form__row:nth-of-type(2)');
+        formIdEle.addEventListener('click',()=>{
+            // formIdEle.style.backgroundColor='yellow'
+            tmp.style.border='1px solid green'
+        })
+    </script> -->
+
+</body>
+</html>
