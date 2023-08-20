@@ -1,0 +1,65 @@
+/* 공통 사항 */
+*{
+    /* outline:1px solid red; */
+}
+*{
+    font-size: var(--font-size-m);
+    padding:0;
+    margin:0;
+}
+ul{
+    list-style: none;
+}
+
+/* 그리드 설정 */
+.footer{
+    width: 1024px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas:
+    "footer_top       footer_top"                    
+    "footer_left      footer_right"
+    ;
+    padding-bottom: 40px;
+    border:20px;
+    box-sizing: border-box;
+}
+/* 푸터 상단 설정 */
+.footer_top{
+    padding: var(--padding-size);
+    grid-area: footer_top;
+    border-bottom: 2px solid var(--border-color-1);
+}
+.footer_top .footer_item .footer_menu{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.footer .footer_top .footer_item .footer_menu a{
+    text-decoration-line: none;
+    color:inherit;
+}
+/* 푸터 왼쪽 아래 설정 */
+.footer_left{
+    letter-spacing: var(--letter-spacing);
+    font-size: var(--font-size-xxl);
+    grid-area: footer_left;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+/* 푸터 오른쪽 아래 설정 */
+.footer_right{
+    grid-area: footer_right;
+    margin-top: 10px;
+}
+.footer_right .footer_item .ftr_item_first{
+    display: flex;
+}
+.footer_right .footer_item .ftr_item_first span{
+    margin-right: 14px;
+    margin-bottom: 7px;
+}
+.seperate_icon{
+    font-size: var(--font-size-s);
+}
+
