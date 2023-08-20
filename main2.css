@@ -1,0 +1,96 @@
+*{
+    /* outline: 1px solid red; */
+}
+*{
+    padding:0;
+    margin:0;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+}
+.main2{
+    display: flex;
+    justify-content: center;
+}
+/* 박스 설정 */
+.main2 .main2_container{
+    box-sizing: border-box;
+    width: 510px;
+    padding: 10px;
+}
+/* 하마찾기 타이틀 */
+.main2 .main2_top .main2_top_left{
+    display: flex;
+    justify-content: flex-start;
+}
+/* 전체보기 링크 */
+.main2 .main2_top .main2_top_right{
+    display: flex;
+    justify-content: flex-end;
+}
+.main2 .main2_bottom{
+    border: 2px solid var(--border-color-1);
+    background-color: var(--back-color-1);
+    padding: 20px;
+    margin-top: 30px;
+}
+.main2 .main2_bottom .main2_bottom_left{
+    display: flex;
+    flex-direction: column;
+}
+/* 첫번째 박스 */
+.main2 .main2_bottom .main2_bottom_left .search_title{
+    display: flex;
+}
+/* 이미지 */
+.main2 .main2_bottom .main2_bottom_left .search_title .id_picture{
+    object-fit: contain;
+    width:50px;
+    height:50px;
+    margin-right: 10px;
+}
+.main2 .main2_bottom .main2_bottom_left .search_title .id_picture img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+/* 포트폴리오 이름 */
+.main2 .main2_bottom .main2_bottom_left .search_title .service_name{
+    display: flex;
+    flex:1;
+}
+.main2 .main2_bottom .main2_bottom_left .search_title .service_name .career_service{
+    font-size: var(--font-size-m);
+}
+.main2 .main2_bottom .main2_bottom_left .search_title .service_name .career_service_name{
+    font-size: var(--font-size-l);
+    font-weight: 900;
+}
+.main2 .main2_bottom .main2_bottom_left .search_title .title_plus{
+    display: flex;
+    align-items: center;
+}
+/* 2번째 박스 */
+.main2 .main2_bottom .main2_bottom_left .search_preview{
+    display: flex;
+    margin-top: 14px;
+}
+/* 3번째 박스 */
+.main2 .main2_bottom .main2_bottom_left .search_career{
+    display: flex;
+}
+.main2 .main2_bottom .main2_bottom_left .search_career .search_career_name{
+    display: flex;
+    margin: 10px;
+    width: 100px;
+}
+.main2 .main2_bottom .main2_bottom_left .search_career .search_career_name .search_name{
+   display: flex;
+   flex : 1;
+   justify-content: flex-end;
+   padding-right: 5px;
+}
