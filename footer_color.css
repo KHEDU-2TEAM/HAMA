@@ -1,18 +1,25 @@
 :root{
+
     /* 폰트 사이즈 */
     --font-size-xxl: 30px;
     --font-size-xl: 23px;
     --font-size-l: 17px;
     --font-size-m: 14px;
     --font-size-s: 10px;
+
     /* 폰트 컬러 */
     --font-color-1 : #111;
+
     /* 배경색 */
-    --back-color-1 : #999;
+    --back-color-1 : #eee;
+
     /* 라인색 */
     --border-color-1 : #999;
+
     /* 여백 */
     --padding-size: 14px;
+
     /* 자간 */
     --letter-spacing: 5px;
+    
 }
