@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>커뮤니티</title>
-    
+
 </head>
 
 <style>
@@ -52,6 +52,9 @@
         display: flex;
         justify-content: flex-end;
         margin-top: 10px;
+
+        /* 전체보기 폰트 사이즈 */
+        font-size: small;
     }
     
     
@@ -176,6 +179,7 @@
                 </div>
             </div>
 
+
             <div class="item">
                 <div class="item__cate">카테고리</div>
                 
@@ -189,6 +193,7 @@
                 </div>
             </div>
 
+
             <div class="item">
                 <div class="item__cate">카테고리</div>
 
@@ -201,7 +206,10 @@
                     </ul>
                 </div>
             </div>
+
+
         </div>
     </div>
+    
 </body>
 </html>
