@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>편의시설</title>
+
+    <style>
+        * {
+            outline: 1px solid plum;
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+
+        /* 전체박스 */
+        .container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            height: 100vw;
+        }
+
+
+        .container .container__var__icon,
+        .container .container__var__search {
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+        }
+
+
+
+
+
+        /* a태그 스타일 지우기. 색을 부모로부터 강제 상속 */
+        .container .container__var .container__var__icon .link_style {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            justify-content: space-around;
+        }
+
+
+        /* 화장실, 편의점 사이 여백 */
+        .container .container__var .container__var__icon .link_style {
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+
+        /* 아이콘+이름 중앙정렬*/
+        .toilet,
+        .store,
+        .fa-restroom {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        /*스크롤*/
+        .container__var__scroller {
+            height: 300px;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+        }
+
+        .container__var__scroller section {
+            scroll-snap-align: start;
+        }
+    </style>
+
+    <!--아이콘-->
+    <script src="https://kit.fontawesome.com/ba16334cfd.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!--편의시설 메인박스-->
+    <div class="container">
+
+        <!--왼쪽 박스-->
+        <div class="container__var">
+
+            <!-- 아이콘 -->
+            <div class="container__var__icon"> <!--박스에링크-->
+
+                <!--화장실-->
+                <a class="link_style" href="#">
+                    <span class="toilet">
+                        <i class="fa-solid fa-restroom"></i>
+                        <p>화장실</p>
+                    </span>
+                </a>
+
+
+                <!--편의점-->
+                <a class="link_style" href="#">
+                    <div class="store">
+                        <i class="fa-solid fa-shop"></i>
+                        <p>편의점</p>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- 검색창 -->
+            <div class="container__var__search">검색창</div>
+
+
+            <!--검색 결과 스크롤-->
+            <article class="container__var__scroller">
+                <section>
+                    <h1>함께 화장실</h1>
+                    <p>울산 남구 달동</p>
+                    <p>000번지</p>
+                    <br>
+                </section>
+
+                <section>
+                    <h1>하마 화장실</h1>
+                    <p>울산 남구 달동</p>
+                    <p>000번지</p>
+                    <br>
+                </section>
+
+                <section>
+                    <h1>주마 화장실</h1>
+                    <p>울산 남구 달동</p>
+                    <p>000번지</p>
+                    <br>
+                </section>
+
+                <section>
+                    <h1>가나 화장실</h1>
+                    <p>울산 남구 달동</p>
+                    <p>000번지</p>
+                    <br>
+                </section>
+
+                <section>
+                    <h1>다라 화장실</h1>
+                    <p>울산 남구 달동</p>
+                    <p>000번지</p>
+                    <br>
+                </section>
+
+                <section>
+                    <h1>마바 화장실</h1>
+                    <p>울산 남구 달동</p>
+                    <p>000번지</p>
+                    <br>
+                </section>
+
+                <section>
+                    <h1>사아 화장실</h1>
+                    <p>울산 남구 달동</p>
+                    <p>000번지</p>
+                    <br>
+                </section>
+
+                <section>
+                    <h1>자차 화장실</h1>
+                    <p>울산 남구 달동</p>
+                    <p>000번지</p>
+                    <br>
+                </section>
+
+            </article>
+
+
+        </div>
+            
+        
+        <!--지도 api-->
+        <div class="container__map">api</div>
+
+    </div>
+
+</body>
+
+</html>
