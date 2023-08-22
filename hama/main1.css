@@ -1,0 +1,91 @@
+/* 공통사항 */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1024px 1fr;
+    grid-template-areas: ". main .";
+}
+.main1 {
+    grid-area: main;
+}
+/* 메인 박스 안에서 카테고리 크기를 조정하기 위해
+카테고리 8개만 따로 담은 박스 */
+.main1 .content{
+    display: flex;
+    justify-content: space-around;
+}
+.main1 .top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+/* 서비스 추천 */
+.main1 .top .service {
+    font-size: var(--font-size-xl);
+}
+/* 전체보기 */
+.main1 .top .full {
+    font-size: var(--font-size-l);
+    margin-top: 10px;
+}
+/* 전체보기의 링크 */
+.main1 .top .full a {
+    text-decoration: none;
+    color: inherit;
+}
+/* 8개의 카테고리를 보여주는 박스모음 */
+.main1 .sec {
+    display: grid;
+    grid-template-areas: "box1 box2 box3 box4"
+                         "box5 box6 box7 box8";
+    justify-items: center;
+    align-items: center;
+}
+/* 카테고리 텍스트 */
+.main1 .sec .box.box1 .menu {
+    position: relative;
+    font-size: var(--font-size-m);
+}
+/* 사진 + 텍스트를 포함한 박스 */
+.main1 .sec .box {
+    position: relative;
+    grid-template-columns: 2fr;
+    width: 150px;
+    height: auto;
+    display: grid;
+    justify-items: center;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.main1 .sec .box.box1 {
+    grid-area: box1;
+}
+.main1 .sec .box.box2 {
+    grid-area: box2;
+}
+.main1 .sec .box.box3 {
+    grid-area: box3;
+}
+.main1 .sec .box.box4 {
+    grid-area: box4;
+}
+.main1 .sec .box.box5 {
+    grid-area: box5;
+}
+.main1 .sec .box.box6 {
+    grid-area: box6;
+}
+.main1 .sec .box.box7 {
+    grid-area: box7;
+}
+.main1 .sec .box.box8 {
+    grid-area: box8;
+}
+.main1 .sec .box img {
+    width: 170px;
+    border-radius: 15px;
+}
+.main1 .sec .box .menu a {
+    text-decoration: none;
+    color: inherit;
+}
