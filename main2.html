@@ -20,8 +20,15 @@
             justify-content: space-around;
         }
         /* 제목 */
-        .main2 .section .title{
-            
+        .main2 .section .main2_head{
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+        .main2 .section .main2_head .allfind{
+            position: absolute;
+            top: 15px;
+            right: 10px;
         }
         /* 박스 */
         .main2 .section .item{
@@ -80,7 +87,10 @@
         <div class="main2">
             <div class="section">
                 <!-- 제목 : 하마찾기 -->
-                <div class="title"><h2>하마찾기</h2></div>
+                <div class="main2_head">
+                    <div class="title"><h2>하마찾기</h2></div>
+                    <div class="allfind"><h3>+전체보기</h3></div>
+                </div>
                 <div class="information">
                     <!-- 박스 1 -->
                     <div class="item">
