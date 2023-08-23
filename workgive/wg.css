@@ -1,0 +1,85 @@
+*{
+    letter-spacing: 1px;
+    line-height: 20px;
+    /* outline: 1px solid red; */
+}
+@font-face {
+    font-family: 'GyeonggiBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+        }
+.container{
+   display: grid;
+   grid-template-areas: ". banner ."
+                        ". main .";
+   grid-template-columns: 1fr 1024px 1fr;
+}
+.banner{
+    grid-area: banner;
+    display: flex;
+    justify-content: center;
+}
+.main{
+    grid-area: main;
+    
+}
+.main .item_box_top{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 110px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+}
+
+.main .item_box_top .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+}
+.main .item_box_top .item .pic img{
+    width: 4rem;
+    height: 4rem;
+}
+.main .item_box_top .item .text{
+    
+    font-size: 0.875rem;
+}
+
+.main .item_box_bottom{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    justify-items: center;
+    box-sizing: border-box;
+}
+.main .item_box_bottom .item{
+    width: 330px;
+    height: 300px;
+    border-radius: 16px;
+    border: 1px solid red;
+    border: .0625rem solid rgba(0,0,0,.125);
+    overflow: hidden;
+}
+.main .item_box_bottom .item .box1 {
+    width: 330px;
+    height: 250px;
+}
+.main .item_box_bottom .item .box1 img{
+    width: 330px;
+    height: 250px;
+}
+.main .item_box_bottom .item .box2 {
+    font-weight: bold;
+    height: 50px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
