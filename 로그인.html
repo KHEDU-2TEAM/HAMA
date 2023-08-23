@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인</title>
 
+    <!--로그인이 id, pw 오류 메세지-->
+    <script src="./login.js"></script>
+
     <!--아이콘을 쓰기 위해-->
     <script src="https://kit.fontawesome.com/68333565dc.js" crossorigin="anonymous"></script>
 
@@ -95,6 +98,15 @@
             outline: none; /* 클릭시 외각선 */
         }
 
+        /* 에러 메세지 */
+        .error {
+            margin-top: 5px;
+            margin-bottom: 15px;
+            list-style: none;
+            color: #f00000;
+            font-size: 0.7rem;
+            display: none;
+        }
 
        /*로그인 버튼*/
         .login .form-wrap .form .form__btn{
@@ -176,6 +188,9 @@
                 </div>
 
 
+                <!--아이디 입력 오류메세지-->
+                <li class="error id_error"><i class="fa-solid fa-circle-exclamation"></i> 아이디(이메일)을 입력해주세요.</li>
+                
                 <!--비밀번호 입력 박스-->
                 <div class="form__row">
                     <i class="fa-solid fa-key fa-bounce"></i> <!--아이콘-->
@@ -188,6 +203,9 @@
                         name = 'pw'/> 
                 </div>
                 
+                <!--비밀번호 입력 오류메세지-->
+                <li class="error pw_error"><i class="fa-solid fa-circle-exclamation"></i> 비밀번호를 입력해주세요.</li>
+
                 <!--로그인 버튼-->
                 <div class="form__row">
 
