@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인</title>
 
-    <!--로그인이 id, pw 오류 메세지-->
-    <script src="./login.js"></script>
-
     <!--아이콘을 쓰기 위해-->
     <script src="https://kit.fontawesome.com/68333565dc.js" crossorigin="anonymous"></script>
 
@@ -223,7 +220,28 @@
                 </div>
 
             </form>
-            
+
+            <!-- 아이디 로그인 오류메세지 -->
+            <script>
+                window.onload = function() {
+                    const form = document.querySelector('.form');
+                    const input_id = form.querySelector('input[name=id]');
+                    const input_pw = form.querySelector('input[name=pw]');
+                    const id_error = document.querySelector('.id_error');
+                    const pw_error = document.querySelector('.pw_error');
+                    const login_button = form.querySelector('.form__btn'); 
+                    
+                    form.addEventListener('submit', function(event) {
+                        id_error.style.display = input_id.value === '' ? 'block' : 'none';
+                        pw_error.style.display = input_pw.value === '' ? 'block' : 'none';
+                        
+                        if (input_id.value === '' || input_pw.value === '') {
+                            event.preventDefault(); // 폼 제출 막기
+                        }
+                    });
+                }
+            </script>
+
             <!-- ul>li*3>a
             순서가 없는 ul의 리스트3개의 a태그(링크) -->
             <ul = class="menu">
@@ -244,7 +262,7 @@
             // formIdEle.style.backgroundColor='yellow'
             tmp.style.border='1px solid green'
         })
-    </script> -->
+    </scrip> -->
 
 </body>
 </html>
