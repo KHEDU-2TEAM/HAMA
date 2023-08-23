@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px;
+        transition: background-color 0.3s ease;
+        background-color: rgb(0, 176, 250);
+        color: white;
+        width: 100px;
+        height: 30px;
+      }
+    .borderbutton{
+        border-radius: 5px;
+        border-color: rgb(0, 176, 450);
+        background-color: white;
+        color: rgb(0, 176, 250);
+        border: 1px solid;
+      }
+        *{
+            /* border: 1px solid red; */
+        }
+        
+        .container{
+            display: grid;
+            grid-template-areas: ". main .";
+            grid-template-columns: 1fr 1024px 1fr;
+        }
+        .main{
+            grid-area: main;
+        }
+        
+        .section{
+            margin-left: 150px;
+        }
+        /* 상단 포트폴리오 윗쪽 내용 */
+        .main .boxs .boxs_main{
+            display: flex;
+            margin-bottom: 50px;
+            margin-top: 50px;
+            /* background-color: #f2f2f2; */
+            width: 710px;
+            padding: 10px;
+            border-radius: 16px;
+            /* border: 0.625px solid rgba(0, 0, 0, 0.125); */
+        }
+        /* 이미지 별명 박스 */
+        .main .boxs .boxs_main .box1{
+            width: 120px;
+            height: 150px;
+            margin-right: 20px;
+        }
+        /* 이미지 */
+        .main .boxs .boxs_main .box1 img{
+            border-radius: 16px;
+            width: 120px;
+            height: 120px;
+        }
+        /* 별명 */
+        .main .boxs .boxs_main .box1 .name{
+            text-align: center;
+        }
+        /* 소개글 */
+        .main .boxs .boxs_main .box2 .longtext{
+            padding-top: 15px;
+            width: 400px;
+            height: 100px;
+        }
+        /* 소개 하단 카테고리, 주소 박스*/
+        .main .boxs .boxs_main .box2 .item1{
+            display: flex;
+            justify-content: space-around;
+        }
+        /* 세부 박스들 */
+        .main .boxs .boxs_main .box2 .item1 > *{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 180px;
+            height: 30px;
+            background-color: #D0D0D0;
+        }
+        /* 견적요청서 채팅 */
+        .main .boxs .boxs_main .box3 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+            margin-top: 20px;
+        }
+        /* 채팅 */
+        .main .boxs .boxs_main .box3 .chat{
+            margin-top: 8px;
+        }
+        /* 하단 포트폴리오 */
+        .main .boxs2 {
+            width: 718px;
+            
+        }
+        /* 포트폴리오 제목 */
+        .main .boxs2 .polio .title{
+            line-height: 70px;
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        }
+        /* 포트폴리오 내용들 */
+        .main .boxs2 .polio .polio_main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="boxs">
+                <div class="boxs_head"><h1>하마상세조회</h1></div>
+               <div class="section">
+                 <div class="boxs_main">
+                     <div class="box1">
+                         <div class="pic">
+                             <img src="/iamge/그림1.jpg" alt=""></div>
+                         <div class="name">용사하마</div>
+                     </div>
+                     <div class="box2">
+                         <div class="longtext">안녕하세요 
+                             한국어/영어 통번역 전문가
+                             스탠리 킴 입니다. 
+                             다수의 통번역 저서 보유하고 있습니다.
+                             </div>
+                         <div class="item1">
+                             <div class="cate">
+                                 <div>영어·번역</div>
+                             </div>
+                             <div class="loca">
+                                 <div>서울 관악구</div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="box3">
+                         <div class="find">
+                            <div class="button">
+                                견적 요청서
+                            </div>
+                        </div>
+                         <div class="chat"><div class="button borderbutton">채팅</div></div>
+                     </div>
+                 </div>
+                 <div class="boxs2">
+                     <div class="polio">
+                         <div class="title">포 트 폴 리 오</div>
+                         <div class="polio_main"><img src="/iamge/hand-s.jpg" alt=""></div>
+                        </div>
+                 </div>
+                </div>
+               </div>
+        </div>
+    </div>
+</body>
+</html>
