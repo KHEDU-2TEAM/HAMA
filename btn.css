@@ -1,0 +1,24 @@
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+  }
+  .colorbutton {
+    background-color: rgb(0, 176, 250);
+    color: white;
+  }
+  .borderbutton{
+    border-radius: 5px;
+    border-color: rgb(0, 176, 450);
+    background-color: white;
+    color: rgb(0, 176, 250);
+    border: 1px solid;
+  }
