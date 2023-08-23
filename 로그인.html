@@ -14,6 +14,7 @@
 
         *{
             margin: 0; padding: 0;
+            /* border: 1px solid red; */
         }
 
         /* 컬러 */
@@ -36,6 +37,7 @@
             color: inherit;
         }
 
+        /*전체화면 */
         .login{
             display: flex;
             justify-content: center;
@@ -43,11 +45,16 @@
             align-items: center; /*y축 중앙 정렬*/
         }
 
+        /* 함께하마 로고 */
+        /* .form__row.logo img{
+            margin-bottom: 20px;
+        } */
 
+        /* 로그인 박스 전체 wrap */
         .login .form-wrap{
+            position: relative;
             width: 300px;
         }
-
 
         /*블럭레벨인 form 태그를 세로로 나열하고 싶다면*/
         .login .form{
@@ -55,26 +62,25 @@
             flex-direction: column;
         }
 
-
+        /* 로그인창 모든 개별 박스  */
         .login .form .form__row{
             display: flex;
             padding: 10px 10px;
         }
-
+        
         /* 타이틀 */
         .login .form .form__row:nth-of-type(1){
             justify-content: center;
             object-fit : contain;
             align-items: end;
         }
-
-        /**/
+        
+        /*아이디 + 비밀번호*/
         .login .form .form__row:nth-of-type(2),
         .login .form .form__row:nth-of-type(3){
             border: 1px solid var(--color-bg1);
             border-radius: 5px;
-
-            
+            margin-bottom: 40px;
         }
         
         /* 로그인 / 카카오톡 로그인 버튼 여백*/
@@ -98,11 +104,12 @@
         /* 에러 메세지 */
         .error {
             margin-top: 5px;
-            margin-bottom: 15px;
             list-style: none;
             color: #f00000;
-            font-size: 0.7rem;
             display: none;
+            font-size: 0.7rem;
+            margin-bottom: 10px;
+            padding-left: 5px;
         }
 
        /*로그인 버튼*/
@@ -148,9 +155,16 @@
         .login .menu .item:hover a{
             text-decoration: underline var(--color-bg1);
         }
-
+        .error.id_error{
+            position: absolute;
+            top: 210px;
+        }
+        .error.pw_error{
+            position: absolute;
+            top: 288px;
+        }
         /*마우스를 올리면 메뉴에 가상의 요소가 생기게*/
-
+        
     </style>
 
 
@@ -167,7 +181,7 @@
             <form action="서버프로그램URL" class="form" method="get">
 
                 <!--로그인창 함께하마 타이틀-->
-                <div class="form__row">
+                <div class="form__row logo">
                     <img src="https://raw.githubusercontent.com/KHEDU-2TEAM/HAMA/main/img/로고.png" alt=""
                     width="300px" height="150px">
                 </div>
@@ -194,7 +208,7 @@
 
                     <!--비밀번호 입력-->
                     <input 
-                        type="text" 
+                        type="password" 
                         class="form__pw from__item" 
                         placeholder="비밀번호"
                         name = 'pw'/> 
@@ -202,7 +216,7 @@
                 
                 <!--비밀번호 입력 오류메세지-->
                 <li class="error pw_error"><i class="fa-solid fa-circle-exclamation"></i> 비밀번호를 입력해주세요.</li>
-
+                
                 <!--로그인 버튼-->
                 <div class="form__row">
 
