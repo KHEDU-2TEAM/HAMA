@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.9/dist/flatpickr.min.css">
+    <script src="./calender.js"></script>
+    <link rel="stylesheet" href="./calender.css">
+    <link rel="stylesheet" href="./세부사항.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="title">
+                <div class="title_text"><h1>세부사항</h1>
+                </div>
+                <div class="title_pic">
+                    <!-- <img src="/iamge/만세ㅐ.jpeg" alt=""> -->
+                </div>
+            </div>
+                <div class="box1">
+                    <div class="location">
+                        <div class="local_title"><h3>지역을 선택해주세요.</h3></div>
+                    <!--  -->
+                    <div class="select">
+                        <div class="bigselect">
+                            <select name="" id="select_1">
+                                <option value="">시/도 </option>
+                                <option value="1">울산광역시</option>
+                                <option value="1">부산광역시</option>
+                                <option value="1">서울턱별시</option>
+                            </select>
+                        </select>
+                        </div>
+                        <!--  -->
+                        <div class="midselect">
+                            <select name="" id="select_1">
+                                <option value="">시/군/구 </option>
+                                <option value="1">울주군</option>
+                                <option value="1">남구</option>
+                                <option value="1">중구</option>
+                            </select>
+                        </select>
+                        </div>
+                        <!--  -->
+                        <div class="smallselect">
+                            <select name="" id="select_1">
+                                <option value="">읍/면/동 </option>
+                                <option value="1">범서읍</option>
+                                <option value="1">옥동</option>
+                                <option value="1">두서면</option>
+                            </select>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 달력부분 -->
+            <div class="main2">
+                <!-- 체크박스 추가 -->
+                
+            <table class="Calendar">
+                <div class="check">
+                    <div class="calender_title">
+                        <h3>희망 날짜를 선택해주세요</h3></div>  
+                    <div class="radios">
+                        <div class="tag">
+                            <label>
+                                <input type="radio" name="radio" class="maples"  onClick="resetCalendar()"> 협의 가능해요.
+                              </label>
+                        </div>
+                          <div class="tag">
+                            <label>
+                              <input type="radio" name="radio" class="maples"  onClick="resetCalendar()"> 가능한 빨리 하고싶어요.
+                            </label>
+                          </div>
+                          <div class="tag">
+                            <label>
+                              <input type="radio" name="radio" class="maple"  value="checkbox3"> 
+                              원하는 날짜가 있어요.
+                            </label>
+                          </div>
+                    </div>
+                </div>
+                <thead>
+                    <tr>
+                        <td onClick="prevCalendar();" style="cursor:pointer;">&#60;</td>
+                        <td colspan="5">
+                            <span id="calYear"></span>년
+                            <span id="calMonth"></span>월
+                        </td>
+                        <td onClick="nextCalendar();" style="cursor:pointer;">&#62;</td>
+                    </tr>
+                    <tr>
+                        <td>일</td>
+                        <td>월</td>
+                        <td>화</td>
+                        <td>수</td>
+                        <td>목</td>
+                        <td>금</td>
+                        <td>토</td>
+                    </tr>
+                </thead>
+    
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+</script>
+                <div class="box3">
+                    <div class="title"><h3>하마에게 전달하고 싶은 내용을 적어주세요.</h3></div>
+                    <div class="box">
+                        <textarea rows = "6" cols = "55" name = "description" style="font-size: 1rem;">난 죽 택
+                        </textarea>
+                    </div>
+                </div>
+                <div class="box4">
+                    <div class="button borderbutton">견적요청</div>
+                </div>
+        </div>
+    </div>
+</body>
+</html>
