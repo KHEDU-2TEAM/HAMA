@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/1cdb516608.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./category.css">
+</head>
+<body>
+    <div class="container__category" id="container__category">
+        <div class="layer_wrap__category"></div>
+        <div class="main__category">
+        <div class="category-container">
+            <div class="textbox__category">
+                <div class="service_category" id="serviceButton">서비스<i class="fas fa-chevron-down"></i></div>
+            </div>       
+            <!-- 서비스 카테고리 모달 -->
+            <div id="serviceModal" class="servicemodal" style="display: none;">
+                 <!-- 모달 내용 추가 -->
+                 <h2>서비스 카테고리</h2>
+                 <li id="cleaning">청소 / 이사</li>
+                 <li id="lesson">레슨</li>
+                 <li id="design">디자인 / 개발</li>
+                 <li id="helper">심부름 / 도우미</li>
+                 <li id="animal">반려동물</li>
+                 <li id="etc">기타</li>
+             </div>
+             <!-- 세부 카테고리를 표시할 요소 추가 -->
+             <div id="service_subcat" style="display: none;"></div> 
+         </div>
+         
+         <div class="category-container">
+             <div class="area_category" id="areaButton">지역<i class="fas fa-chevron-down"></i></div>     
+             <!-- 지역 카테고리 모달 -->
+             <div id="areaModal" class="areamodal" style="display: none;">
+                 <!-- 모달 내용 추가 -->
+                 <h2>지역 카테고리</h2>
+                 <li id="busan">부산광역시</li>
+                 <li id="ulsan">울산광역시</li>
+                 <li id="gyeongnam">경상남도</li>
+                 <li id="seoul">서울특별시</li>
+                 <li id="daegu">대구광역시</li>
+                 <li id="gwangju">광주광역시</li>
+                 <li id="jeju">제주특별자치도</li>
+             </div>
+             <!-- 세부 카테고리를 표시할 요소 추가 -->
+             <div id="area_subcat" style="display: none;"></div> 
+         </div>
+       </div>
+    </div>
+    <script src="./category.js"></script>
+</body>
+</html>

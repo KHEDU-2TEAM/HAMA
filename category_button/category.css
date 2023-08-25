@@ -1,0 +1,85 @@
+.container__category {
+    display: grid;
+    grid-template-areas: ". main .";
+    grid-template-columns: 1fr 1024px 1fr;
+}
+.layer_wrap__category {
+    display: none;
+}
+.layer_wrap__category.active {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    background-color: rgba(0,0,0,.2);
+}
+.main__category{
+    grid-area: main;
+    display: flex;
+    position: relative;
+    height: 70px;
+}
+.category-container li {
+    list-style-type: none;
+    text-align: center;
+    margin: 20px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+.category-container .service_category{
+    width: 84px;
+}
+.category-container .service_category,
+.category-container .area_category {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 20px auto;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    border: 2px solid transparent;
+}
+.category-container .service_category .fas.fa-chevron-down,
+.category-container .area_category .fas.fa-chevron-down {
+    margin-left: 20px;
+    display: flex;
+}
+.category-container .service_category:active,
+.category-container .area_category:active {
+    background-color: rgba(0,0,0,.2);
+}
+.category-container .area_category{
+    left: 140px;
+}
+.category-container .service_category:hover,
+.category-container .area_category:hover {
+    cursor: pointer;
+    background-color: #e0e0e0;
+}
+.category-container .servicemodal,
+.category-container .areamodal,
+.category-container #service_subcat,
+.category-container #area_subcat {
+    display: flex;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    height: auto;
+    top: 100px;
+    left: 280px;
+    position: absolute;
+    padding-left: 20px;
+}
+.category-container #service_subcat ul,
+.category-container #area_subcat ul {
+    padding: 0;
+}
