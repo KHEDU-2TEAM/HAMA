@@ -1,0 +1,86 @@
+/*
+확인요소.
+
+html에서 폰트.css 경로를 맞췄는지.
+자체 css에서 따로 폰트를 지정하지 않았는지.
+
+초기메인화면을 참고하여 본인 html에서 쓰일 글자 크기를 비교 후 html에서
+똑같은 태그로 지정해주기.
+ ex)  내 화면에서 이 부분의 글자 폰트와 초기화면의 서비스추천 글자와
+ 스타일을 똑같이 지정해주고 싶어! -> 태그를 h2로 지정해주기. 
+*/
+
+
+
+
+
+
+@font-face {
+    font-family: 'GowunBatang-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RIDIBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 헤더 */
+.header{
+    font-family: 'GowunBatang-Regular';
+    font-weight: bold;
+}
+
+/* 세부페이지_내용 */
+body{
+    font-family: 'RIDIBatang';
+    font-size: medium;
+}
+
+h1{
+    font-family: 'GowunBatang-Regular';
+}
+
+/*
+초기 메인화면에서 보이는 
+서비스추천 하마찾기 커뮤니티와 같은
+섹션을 나누는 서브타이틀
+*/
+h2{
+    font-family: 'GowunBatang-Regular';
+}
+
+/*
+초기 메인화면에서 보이는
+포장 이사 개인PT 수학과외 웹디자인과 같은
+카테고리 타이틀 스타일 
+*/
+h4{
+    font-family: 'GowunBatang-Regular';
+}
+
+
+/* 하마찾기 닉네임+매칭횟수+경력15년 */
+.main2 .container__main2 .section__main2 .information__main2 .item__main2 .box1__main2  .box1_head,
+.main2 .container__main2 .section__main2 .information__main2 .box3__main2{
+    font-family: 'GowunBatang-Regular';
+    font-weight: bold;
+}
+
+
+/* 전체보기, 카테고리 폰트 사이즈 */
+.main1 .top__main1 .full__main1,
+.main2 .section__main2 .main2_head .full__main2,
+.main3 .community__main3 .community__menu .community__more .full__main3,
+.item__main3 .item__cate
+    {
+    font-size: small;
+    font-family: 'GowunBatang-Regular';
+    font-weight: bold;
+    }
+
+
