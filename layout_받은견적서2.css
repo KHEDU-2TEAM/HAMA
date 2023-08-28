@@ -1,0 +1,427 @@
+
+.main  {
+    width: 1024px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* 페이지 제목 */
+.box1 {
+    padding-top: 50PX;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.box1_1{
+    margin-bottom: 20px;
+}
+/* box_wrap 1 + 2 */
+.box2 {
+    height: 100px;
+    padding-top: 50PX;
+    border-bottom: 1px solid #aaa;
+}
+
+/* 견적 안내 (text1,2) */
+.box2_wrap1 {
+    display: grid;
+    grid-template-areas: "text1 text2";
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+/* 견적서 카테고리 */
+.text1 {
+    grid-area: text1;
+}
+/* 대분류 > 소분류 */
+    #select_category1,
+    #select_category2 {
+        display: inline;
+    }
+
+#select_category1 {
+    font-size: 1.3rem;
+}
+
+#select_category2 {
+    font-size: 2rem;
+}
+
+/* 요청일 */
+.text2 {
+    grid-area: text2;
+    display: flex;
+    padding-left: 100px;
+    font-size: 1.2rem;
+    color: #AAAAAA;
+}
+
+#text2_box1,
+#text2_box2 {
+    display: grid;
+    text-align: center;
+}
+
+/* 견적 안내 (text3,4) */
+.box2_wrap2 {
+    display: grid;
+    grid-template-areas: "text3 text4";
+    grid-template-columns: 1.3fr 1fr;
+    padding: 10px 0;
+}
+
+/* 요청마감안내 */
+.text3 {
+    grid-area: text3;
+    display: flex;
+    font-size: 1.3rem;
+    align-items: end;
+    padding-bottom: 5px;
+}
+
+/* 버튼 (견적 요청서 + 요청 마감) */
+.text4 {
+    grid-area: text4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.text4 button{
+    font-family: 'GowunBatang-Regular';
+}
+
+.text4_btn {
+    background-color: #00B0FA;
+    color: white;
+    display: inline-block;
+    width: 165px;
+    height: 40px;
+    text-align: center;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.photo {
+    grid-area: ele1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./img/루루팡.png);
+    background-size: cover;
+    background-position: center center;
+    width: 200px;
+    height: 150px;
+    
+}
+
+
+.nickname {
+    grid-area: ele2;
+    display: flex;
+    flex-direction: column;
+}
+    #ele2_1, #ele3_1, #ele4_1, #ele5_1, #ele6_1{
+        margin-bottom: 15px;
+        font-weight: 800;
+    }
+    #ele2_2{
+        font-size: 1.5em;
+        padding-top: 10px;
+    }
+    
+.detail {
+        grid-area: ele3;
+        display: flex;
+        flex-direction: column;
+    }
+    /* #ele3_1{
+        margin-bottom: 10px;
+    } */
+    #ele3_2{
+        font-weight: 400;
+    }
+
+.category {
+    grid-area: ele4;
+}
+    #ele4_2{
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+    #ele4_2_2{
+        font-size: 1.5em;
+    }
+
+.location {
+    grid-area: ele5;
+}
+    #ele5_2{
+        margin-top: 5px;
+        font-size: 1.2em;
+        font-weight: 400;
+    }
+
+.data {
+    grid-area: ele6;
+    
+}
+
+    #ele6_2{
+            margin-top: 5px;
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+    
+.edit {
+    grid-area: ele7;
+    height: 40px;
+    font-size: 1em;
+    background-color: #fff;
+    border: 1px solid #00B0FA;
+    color: #00B0FA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* 본문안내 */
+.box3 {
+    padding-top: 100px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+    display: flex;
+    justify-content: center;
+}
+.box3_notice{
+    position: relative;
+}
+
+/* 받은견적서 msgBox */
+.msgBox{
+    border: 1px solid #AAAAAA;
+    border-radius: 5px;
+    display: grid;
+    grid-template-areas:
+        'msgBox_ele1 msgBox_ele2 msgBox_ele2 msgBox_ele2'
+        'msgBox_ele1 msgBox_ele3 msgBox_ele3 msgBox_ele3'
+        'msgBox_ele1 msgBox_ele4 msgBox_ele4 msgBox_ele4'
+        'msgBox_ele1 . msgBox_ele6 .';
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px 10px;
+    padding: 20px;
+    text-align: left;
+    font-size: 1rem;
+    position: relative;
+}
+
+/* 하마 사진 */
+.msgBox_ele1 {
+    grid-area: msgBox_ele1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.msgBox_ele1 img{
+    width: 200px;
+}
+
+/* 하마 닉네임 */
+.msgBox_ele2 {
+    grid-area: msgBox_ele2;
+    display: flex;
+    flex-direction: row;
+    po
+}
+
+/* 하마 소개 */
+.msgBox_ele3 {
+    grid-area: msgBox_ele3;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+#msgBox_ele3_1, #msgBox_ele4_1, #msgBox_ele5_1{
+    margin-right: 20px;
+    display: inline-block;
+}
+#msgBox_ele3_2, #msgBox_ele4_2, #msgBox_ele5_2{
+    font-size: small;
+    align-items: center;
+}
+
+#msgBox_ele3_2 {
+        height: 80px; /* 원하는 고정 높이 설정 */
+        overflow: auto; /* 길이가 넘칠 때 스크롤 표시 */
+        padding-left: 5px;
+        width: 550px;
+    }
+
+    /* 하마 위치 */
+.msgBox_ele4 {
+    grid-area: msgBox_ele4;
+    display: flex;
+    flex-direction: row;
+}
+
+/* 예상 비용 */
+/* .msgBox_ele5 {
+        grid-area: msgBox_ele5;
+        display: flex;
+    flex-direction: row;
+} */
+
+/* 견적서 버튼 */
+.msgBox_ele6{
+    grid-area: msgBox_ele6;
+    margin-left: auto;
+    font-size: 1em;
+}
+
+#msgBox_ele6_pop {
+    background-color: #fff;
+    color: #00B0FA;
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    border: 2px solid #00B0FA;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 채팅 버튼 */
+.msgBox_ele7{
+    grid-area: msgBox_ele7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:150px;
+    height: 40px;
+    text-align: center;
+    border: 2px solid #00B0FA;
+    cursor: pointer;
+    font-size: 0.8em;
+    position: absolute;
+    right: 40px;
+    top: 186px;
+}
+
+.msgBox_ele7 a {
+    color: #00B0FA;
+    font-size: 0.6em;
+}
+
+/* 팝업창 관련 CSS */
+
+/* 견적요청서, 견적서 팝업 박스 */
+.popup, .popup2 {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 50px;
+    background-color: white;
+    z-index: 1000;
+    width: 900px;
+    height: auto;
+    border: 1px solid gray;
+}
+
+.pop_title, .pop2_title {
+    font-size: 2em;
+    margin: 30px 5px ;
+}
+
+.pop_content {
+    display: grid;
+    grid-template-areas:
+        'ele1 ele2 ele3 ele3'
+        'ele1 ele4 ele5 ele6'
+        '. . . ele7';
+    gap: 20px 10px;
+    grid-template-rows: 3.5fr 1.5fr 1fr;
+}
+
+
+.popup.active, .popup2.active {
+    display: block;
+}
+
+/* 팝업 뒷 배경 */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+/* .popup.active~.popup-overlay {
+    display: block;
+} */
+
+.popup-overlay.active {
+display: block;
+}
+
+/* 하마 견적서 : 팝업2 */
+.pop2_content{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* ele2 : 서비스 분류, ele3 : 하마 소개, ele4 : 예상 비용, ele5 : 상세설명 */
+.popup2_ele2, .popup2_ele3, .popup2_ele4, .popup2_ele5 {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin-bottom: 15px;
+}
+
+.popup2_ele6{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    background-color: #00B0FA;
+    color: #fff;
+    font-size: 1.1em;
+    border: none;
+}
+
+#popup2_ele2_1, #popup2_ele3_1, #popup2_ele4_1, #popup2_ele5_1{
+    width: 100px;
+    margin-right: 20px;
+    text-align: right;
+    font-weight: 900;
+}
