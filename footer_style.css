@@ -1,23 +1,43 @@
 
-/* *{outline: 1px solid red;} */
-
 *{margin: 0; padding: 0;}
+
+/* 그리드로 영역지정 */
+.footer{
+    display: grid;
+    grid-template-areas:"f1 footer f2";
+    grid-template-columns: 1fr 1024px 1fr;
+}
 
 
 /*이용약관 개인정보처리방침 자묻질 공지사항 광고문의 박스*/
+.footer__body{
+    grid-area: footer;
+}
 
-.menu{
+/* 왼쪽 푸터*/
+.f1{
+    grid-area: f1;
+    background-color: var(--back-color-1);  
+}
+  
+/* 오른쪽 푸터 */
+.f2{
+    grid-area: f2;
+    background-color: var(--back-color-1);    
+}
+
+.menu__footer{
     display: flex;
-    justify-content: space-around; /* 박스 거리 정렬*/
+    justify-content: space-around;     /* 박스 거리 정렬 */
     
     /*위 아래 여백*/
-    padding: 30px;
-    margin: 10px;
+    padding: 20px;
+    
 
     /*양 옆 여백*/
-    margin-left: 400px;
-    margin-right: 400px;    
-    
+     /* margin-left: 400px;
+    margin-right: 400px;    */
+    font-size: small;
 }
 
 
@@ -33,20 +53,12 @@ a{
     text-transform: uppercase; /*전체 글자를 대문자로*/
 }
 
-/*푸터의 top 박스*/
-.footer .footer__top{
-    display: flex;
-    justify-content: center;/*주축기준 중앙정령*/
-    align-items: flex-end; /*세로축 기준 맨 아래쪽으로(수직정렬)*/
-    height: 50px;/*상자의 세로크기*/
-    padding-bottom: 10px; /*상자 내부 아래쪽 여백*/
-}
-
 /*푸터의 body 박스*/
 .footer .footer__body{
     /*변수를 사용할 땐 var() */
     color: var(--color-font1);
     background-color:var(--back-color-1);
+    font-size: small;
 }
 
 /*푸터의 바디 박스들을 중앙정렬*/
@@ -58,7 +70,7 @@ a{
 
 /*컨텐츠 박스*/
 .footer .footer__body .footer__content{
-    padding: 20px 0; /*내부여백 세로 가로*/
+    padding: 20px 0;     /* 내부여백 세로 가로 */
 }
 
 /*각 컨텐츠 박스의 타이틀 스타일*/
