@@ -1,30 +1,36 @@
 
 *{margin: 0; padding: 0;}
 
-/* 그리드로 영역지정 */
+
+/*푸터의 전체*/ 
 .footer{
+    text-transform: uppercase; /*전체 글자를 대문자로*/
     display: grid;
-    grid-template-areas:"f1 footer f2";
+    grid-template-areas: 'f1 footer f2';
     grid-template-columns: 1fr 1024px 1fr;
 }
 
-
-/*이용약관 개인정보처리방침 자묻질 공지사항 광고문의 박스*/
+/*푸터의 body 박스*/
 .footer__body{
-    grid-area: footer;
+    grid-area: footer;   
+    /*변수를 사용할 땐 var() */
+    color: var(--color-font1);
+    background-color:var(--back-color-1);
+    font-size: small;
 }
 
-/* 왼쪽 푸터*/
+/*푸터의 왼쪽 박스 위치를 잡아주고 색 지정*/
 .f1{
     grid-area: f1;
-    background-color: var(--back-color-1);  
+    background-color:var(--back-color-1);
 }
-  
-/* 오른쪽 푸터 */
+
+/*푸터의 오른쪽 박스 위치를 잡아주고 색 지정*/
 .f2{
     grid-area: f2;
-    background-color: var(--back-color-1);    
+    background-color:var(--back-color-1);
 }
+
 
 .menu__footer{
     display: flex;
@@ -41,31 +47,23 @@
 }
 
 
+/* a태그는 상위요소의 색을 상속받지 않으므로 명시적으로 부모태그의 글자색을 상속받게 강제 부여 */ 
 a{
     text-decoration: none;
-    color: inherit; /*명시적으로 부모태그의 글자색을 상속받게 강제 부여해야 한다.*/
-}
-/*↑ 원래 a태그는 상위요소의 색을 상속받지 않는다.*/
-
-
-/*푸터의 전체*/ 
-.footer{
-    text-transform: uppercase; /*전체 글자를 대문자로*/
+    color: inherit;
 }
 
-/*푸터의 body 박스*/
-.footer .footer__body{
-    /*변수를 사용할 땐 var() */
-    color: var(--color-font1);
-    background-color:var(--back-color-1);
-    font-size: small;
+
+.footer__body{
+    padding: 10px;
 }
 
 /*푸터의 바디 박스들을 중앙정렬*/
+/* 주축 기준 중앙정렬*/
 .footer .footer__body .footer__content,
 .footer .footer__body .footer__copyright{
     display: flex;
-    justify-content: center; /* 주축 기준 중앙정렬*/
+    justify-content: center; 
 }
 
 /*컨텐츠 박스*/
@@ -78,9 +76,9 @@ a{
     font-weight: bold;
 }
 
-
+/*컨텐츠의 박스와 박스 사이의 간격*/
 .footer .footer__body .footer__content .footer__content3{
-    margin-right: 200px; /*컨텐츠의 박스와 박스 사이의 간격*/
+    margin-right: 200px; 
 }
 
 
