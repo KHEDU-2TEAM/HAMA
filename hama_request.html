@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="https://kit.fontawesome.com/bfabd822e0.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./footer_color.css">
+    <link rel="stylesheet" href="./footer_style.css">
+    <link rel="stylesheet" href="./btn.css">
+    <link rel="stylesheet" href="./font.css">
+    <link rel="stylesheet" href="./hama_request.css">
+
+    <link rel="stylesheet" href="./category.css">
+
+
+</head>
+
+<body>
+    <div class="hama_request_container">
+    <!-- 헤더 시작 -->
+    <div class="header">
+        <div class="headers">
+            <div class="logo_loggo">
+    
+        <!-- logo / 로고 -->
+        <div class="logo"
+            onclick="location.href='http://192.168.0.182:5500/project/index/index.html'"
+            style="cursor: pointer;"><img src="./img/logo.png" width="140px" height="70px"></div>
+        </div>
+    
+        <!-- 로고 옆 gnb 커뮤니티,채팅 등등 -->            
+        <div class="gnb">
+            <ul class="menu__headers">
+
+        <!-- 일을주마 -->
+                <li>
+                   <a href="#">일을주마</a>
+                   <ul class="depth_1">
+                       <li><a href="#">견적요청</a></li>
+                   </ul>
+                </li>
+
+        <!-- 일을하마 -->
+                <li>
+                   <a href="#">일을하마</a>
+                   <ul class="depth_1">
+                       <li><a href="#">요청게시판</a></li>
+                   </ul>
+                </li>
+        <!-- 커뮤니티 -->
+                <li>
+                  <a href="#">커뮤니티</a>
+                </li>
+        <!-- 하마찾기 -->
+                <li>
+                  <a href="#">하마찾기</a>
+                </li>
+              </ul>
+        </div>
+    
+        <!-- 로그인,회원가입  -->
+        <div class="login_signup">
+            <div></div>
+            <div class="login" onclick="location.href='http://192.168.0.182:5500/project/login/login.html'"style="cursor: pointer;">받은요청</div>
+            <div class="login" onclick="location.href='http://192.168.0.182:5500/project/login/signup.html'"style="cursor: pointer;">보낸견적</div>
+            <div class="login" onclick="location.href='http://192.168.0.182:5500/project/login/signup.html'"style="cursor: pointer;">채팅</div>
+            <div class="login2"style="cursor: pointer;">
+                <li>
+                    <a href="#"><i class="fa-solid fa-user"></i></i></a>
+                    <ul class="depth_1">
+                        <li><p>회원관리</p></li>
+                        <li><a href="#">하마신청</a></li>
+                        <li><a href="#">프로필등록</a></li> 
+                        <li><a href="#">회원정보수정</a></li>
+                        <li><a href="#">회원탈퇴</a></li>
+                        <li><p>하마전용</p></li>
+                        <li><a href="#">포트폴리오</a></li>
+                    </ul>
+                 </li></div>
+            
+            </div>
+        </div>
+    </div>
+
+    <!-- 하마신청 본문 시작 -->
+
+    <!--하마찾기 전체박스-->
+    
+        <div class="hama_request">
+        
+            <!--하마찾기 개별박스-->
+            <div class="hama_request_box">
+                <div class="hama_request_box_body">
+                    <div class="hama_request_title">
+                        <h1 class="hama_request_li">하마신청</h1>
+                        <h4 class="hama_request_li">모든 항목 필수 가입</h4>
+                    </div>
+                    
+                    <div class="hama_request_post">
+                            <div class="hama_request_li">
+                                <div class="hama_request_li_name">
+                                    <h2 class="hama_request_li_name_1">닉네임</h2>
+                                    <li class="hama_request_li_name_2">하마가되고싶어요</li>
+                                </div>
+                            </div>
+                            
+                            
+                            <!-- 카테고리 시작 -->
+                            <div class="hama_request_li">
+        
+                                <div class="container__category" id="container__category">
+                                   
+                                    <h2 class="address">주소</h2>
+        
+                                    <div class="main__category">
+                                        
+                                    <div class="category-container">
+                                        <div class="textbox__category">
+                                            <div class="service_category" id="serviceButton">서비스<i class="fas fa-chevron-down"></i></div>
+                                        </div>       
+                                        <!-- 서비스 카테고리 모달 -->
+                                        <div id="serviceModal" class="servicemodal" style="display: none;">
+                                             <!-- 모달 내용 추가 -->
+                                             <h2>서비스 카테고리</h2>
+                                             <li id="cleaning">청소 / 이사</li>
+                                             <li id="lesson">레슨</li>
+                                             <li id="design">디자인 / 개발</li>
+                                             <li id="helper">심부름 / 도우미</li>
+                                             <li id="animal">반려동물</li>
+                                             <li id="etc">기타</li>
+                                         </div>
+                            
+                                         <!-- 세부 카테고리를 표시할 요소 추가 -->
+                                         <div id="service_subcat" style="display: none;"></div> 
+                                     </div>
+                                     
+                            
+                                     <div class="category-container">
+                                         <div class="area_category" id="areaButton">지역<i class="fas fa-chevron-down"></i></div>     
+                                         <!-- 지역 카테고리 모달 -->
+                                         <div id="areaModal" class="areamodal" style="display: none;">
+                                             <!-- 모달 내용 추가 -->
+                                             <h2>지역 카테고리</h2>
+                                             <li id="busan">부산광역시</li>
+                                             <li id="ulsan">울산광역시</li>
+                                             <li id="gyeongnam">경상남도</li>
+                                             <li id="seoul">서울특별시</li>
+                                             <li id="daegu">대구광역시</li>
+                                             <li id="gwangju">광주광역시</li>
+                                             <li id="jeju">제주특별자치도</li>
+                                         </div>
+                                         <!-- 세부 카테고리를 표시할 요소 추가 -->
+                                         <div id="area_subcat" style="display: none;"></div> 
+                                     </div>
+                                   </div>
+                                </div>
+                                
+                                <script src="./category.js"></script>
+                                
+                            </div>
+        
+                            <div class="hama_request_li">
+                                <h2>휴대폰 번호</h2>
+        
+                                <div class="hama_request_li_phone">
+                                    
+                                    <form class="hama_request_li_phone_box1"> 
+        
+                                        <div class="phoneVerificationForm_1">
+                                            <input type="text" class="phoneVerificationForm__phoneNumber" placeholder="휴대폰 번호">
+                                            <button class="phoneVerificationForm__button colorbutton">발송하기</button>
+                                        </div>
+                                        
+                                        <div class="phoneVerificationForm_2">
+                                            <input type="text" class="phoneVerificationForm__verificationCode" placeholder="인증번호">
+                                            <button class="phoneVerificationForm__button colorbutton">인증확인</button>
+                                        </div>
+        
+                                    </form>
+        
+                                </div>
+        
+                                <div id="verificationStatus"></div>
+                                
+                            </div>
+        
+                    </div>
+                    
+                    <div class="hama_request_words">
+                        <ul>
+                            <li>입력하신 휴대폰 정보가 일치하지 않는 경우 인증문자가 발송되지 않습니다.</li>
+                            <li>1분 이내에 인증 문자가 수신되지 않을 경우, 번호를 확인하신 뒤 재시도를 해주시기 바랍니다.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="hama_request_button">
+                        <button class="button colorbutton">하마 신청하기</button>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        <!-- 푸터시작 -->
+        <div class="f1"></div>
+        <div class="f2"></div>
+        <div class="footer">
+           
+            <!--푸터 바디-->
+            <div class="footer__body">
+    
+                <!--이용약관 개인정보처리방침 자주묻는질문 공지사항 광고문의-->
+                
+                    <div class = "menu__footer">
+                        <p><a href="#">이용약관</a></p>
+                        <p><a href="#">개인정보처리방침</a></p>
+                        <p><a href="#">자주 묻는 질문</a></p>
+                        <p><a href="#">공지사항</a></p>
+                        <p><a href="#">광고문의</a></p>
+                    </div>
+                
+    
+                <!--푸터 바디 속 컨텐츠 시작-->
+                <div class="footer__content">
+                    
+                    <!--박스1-->
+                    <div class="footer__content3">
+                        <p class="title">사업자 등록번호 : 111-77-123456</p>
+                        <p>우아한하마들(주) 대표팀장 정인수</p>
+                        <p>개인정보관리책임자:정인수</p>
+                    </div>
+    
+                    <!--박스2-->
+                    <div class="footer__content4">
+                        <p>평일:오전 10:00 ~ 오후 18:00</p>
+                        <p>점심:오후 12:00 ~ 오후 13:00</p>
+                        <p>토/일/공휴일 휴무</p>
+                        <p>TEL : 123-456-7890</p>
+                    </div>
+                    
+                </div><!--푸터 바디 속 컨텐츠 끝-->
+    
+                <!--카피라이트-->
+                <div class="footer__copyright">
+                    COPYRIGHT ⓒ 우아한하마들(주) COMPANY. ALL RIGHTS RESERVED.
+                </div>
+    
+            </div>
+        </div>   
+    </div>
+
+    
+
+</div>
+
+    
+</body>
+</html>
