@@ -1,0 +1,201 @@
+/* *{outline: 1px solid tomato;} */
+
+.hama_request_container{
+  display: grid;
+  grid-template-areas: 
+                       "header header header"
+                       ". main ."
+                       "f1 footer f2";
+  grid-template-columns: 1fr 1024px 1fr;
+  
+
+}
+
+.header{
+  grid-area: header;
+}
+
+.f1{
+  grid-area: f1;
+  background-color: var(--back-color-1);
+  margin-top: 200px; /*하단 여백*/
+}
+
+.f2{
+  grid-area: f2;
+  background-color: var(--back-color-1);
+  margin-top: 200px; /*하단 여백*/
+}
+
+/*하단 여백*/
+.footer{
+  grid-area: footer;
+  margin-top: 190px;}
+
+
+/*하마찾기 전체박스*/
+.hama_request {
+  /*.hama_request_box와 위치를 맞추기 위해 추가한 정렬*/
+   grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1024px;
+  }
+
+  
+
+  li{
+    list-style: none;
+  }
+
+  .hama_request_box {
+    /*.hama_request_box_bod와 위치를 맞추기 위해 추가한 정렬*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+  }
+
+  .hama_request_box_body{
+    display: flex; /*요소들을 가로로 정렬 */
+    flex-direction: column; /* 세로 방향으로 정렬 */
+    align-items: center; /* 요소를 수직 방향으로 중앙 정렬 */
+    justify-content: center; /* 요소를 수평 방향으로 중앙 정렬 */
+
+    padding: 20px;
+
+    height: 100%;
+    margin-top: 200px;
+
+    outline: 1px solid var(--border-color-1);
+    border-radius: 10px;
+
+  }
+
+
+  .hama_request_title {
+    text-align: center;
+    margin-bottom: 15px;
+    
+  }
+
+  .hama_request_post{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width : 600px;
+    }
+
+  .hama_request_post, .hama_request_words, .box4 {
+    margin: 10px 0;
+  }
+
+    /*요소들 사이의 여백*/
+    .hama_request_li{
+    
+    margin: 30px;
+  }
+
+  .hama_request_li_name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+  }
+
+  /* 가이드 설명글 박스 */
+  .hama_request_words{
+    
+    padding: 20px;
+    outline: 1px solid #eee;
+    border-radius: 5px;
+    margin-top: 0px;
+    margin-bottom: 100px;
+  }
+
+  /* 하마 신청하기 버튼 중앙정렬 + 여백 */
+  .hama_request_button {
+    text-align: center;
+    margin: 50px;
+  }
+
+
+
+  /* 닉네임 + (닉네임) 사이 간격을 위한 여백 */
+  .hama_request_li_name_1,
+  .hama_request_li_name_2{
+    margin: 10px;
+  }
+
+  /* 닉네임 박스 */
+  .hama_request_li_name_2{
+    border: 2px solid transparent;  
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    width: 40%;
+    height : 20px auto;
+  }
+
+  
+  /* 주소+(서비스/지역 버튼) 박스를 중앙으로 정렬하기 위한 코드*/
+  .hama_request .hama_request_box .hama_request_box_body .hama_request_li .container__category{
+    display: flex;
+    width: 500px;
+    height: 100px;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center;  */
+  }
+
+
+  /* 서비스/지역 카테고리 버튼을 중앙으로 이동시키기 위한 여백 */
+  /* .hama_request .hama_request_box .hama_request_box_body .hama_request_li .container__category .service_category,
+  .hama_request .hama_request_box .hama_request_box_body .hama_request_li .container__category .area_category {
+    margin-left: 90px;
+    margin-top: 20px;
+  } */
+
+  /* 휴대폰 인증 */
+  .hama_request_li_phone{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .phoneVerificationForm__phoneNumber,
+  .phoneVerificationForm__verificationCode{
+    border: 2px solid transparent; 
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+
+    height : 20px auto;
+  }
+
+  /* 휴대폰 번호칸 + 인증번호 칸 사이 여백 */
+  .phoneVerificationForm_1,
+  .phoneVerificationForm_2{
+    margin: 10px;
+  }
+
+  /* 휴대폰 인증 버튼의 스타일*/
+  .hama_request_li_phone .hama_request_li_phone_box1 .phoneVerificationForm__button {
+    border: none;
+    border-radius: 5px;
+    
+    border: 2px solid transparent; 
+    margin: 10px;
+    padding: 10px 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+
+    height : 20px auto;
+}
