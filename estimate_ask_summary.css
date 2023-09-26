@@ -1,0 +1,82 @@
+/* estimate_ask_summary.css 파일 내용 */
+.top__title__postlist_ask_hama{
+  display: flex;
+}
+.title__postlist_ask_hama_summary {
+  width: 900px;
+  height: auto;
+  border-radius: 5px;
+  padding: 20px;
+}
+/* 요약부분 전체 감싼 부분 */
+.summary_wrap{
+  display: grid;
+  grid-template-areas: 
+  'category date'
+  'deadLine btns';
+  width: 100%;
+  padding-left: 20px;
+  grid-template-columns: 8fr 3fr;
+}
+
+/* 서비스 분야 */
+.summary1{
+  grid-area: category;
+  display: flex;
+  margin-bottom: 10px;
+}
+  /* 서비스 중분류 분야 */
+  #summary1_2{
+    font-size: 1.2rem;
+  }
+
+/* 견적 요청일 + 날짜 */
+.summary2{
+  grid-area: date;
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: left;
+}
+  /* 견적 요청일 제목 */
+  #summary2_1{
+    width: 100px;
+    text-align: center;
+    margin-right: 20px;
+  }
+  /* 견적 요청일 날짜 */
+  #summary2_2{
+    color: #666;
+  }
+  
+  /* 마감시간 데드라인 */    
+  .summary3{
+    grid-area: deadLine;
+    display: flex;
+    font-size: 1.4rem;
+  display: flex;
+  align-items: end;
+}
+
+/* 견적요청서 + 요청마감 버튼 구간 */
+.summary4{
+  grid-area: btns;
+  display: flex;
+  justify-content: left;
+}
+
+.summary4 button{
+  background-color: #00B0FA;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  height: 30px;
+  width: 100px;
+  cursor: pointer;
+}
+.summary4 button:hover{
+  background-color: #0056b3;
+}
+
+.summary4_1{
+  margin-right: 20px;
+}

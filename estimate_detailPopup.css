@@ -1,0 +1,87 @@
+/* 팝업창 전체 상자*/
+#detailPopup .wrap_box{
+    width: 800px;
+    height: auto;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: white;
+}
+
+/* 팝업창 제목 : 견적서 조회 */
+#detailPopup .detail_title{
+    font-weight: bolder;
+    color: gray;
+    margin-bottom: 30px;
+}
+
+/* 세부 항목 묶음 */
+#detailPopup .detail_content{
+    padding-left: 30px;
+}
+
+/* 예상비용 액수 */
+#detailPopup #content_3_3{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    padding-right: 5px;
+}
+
+/* 상세 설명 */
+#detailPopup .detail_content_4{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* 세부항목 제목들 */
+#detailPopup #content_1_1, #content_3_1, #content_4_1{
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    font-weight: bolder;
+    text-align: right;
+    align-items: center;
+}
+
+/* 세부항목 내용들 */
+#detailPopup #content_1_2, #content_3_2, #content_4_2{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* 상세설명 : 내용 길이에 따라 스크롤 필요 */
+#detailPopup #content_4_2{
+    height: auto;
+    width: 644px;
+    font-size: 0.8em;
+}
+
+#detailPopup #content_1_2_2{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+/* 확인 버튼 박스 */
+#detailPopup .detail_button {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+/* 확인 버튼 */
+#detailPopup .detail_button button{
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
+#detailPopup .detail_button button:hover{
+    background-color: #666;
+    color: white;
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community</title>
+    <link rel="stylesheet" href="./btn.css"> <!-- 버튼 css -->
+    <link rel="stylesheet" href="font.css"> <!-- 폰트 css -->
+    <link rel="stylesheet" href="header.css"> <!-- 헤더 CSS-->
+    <link rel="stylesheet" href="footer_color.css"> <!-- 푸터 컬러 CSS-->
+    <link rel="stylesheet" href="footer_style.css"> <!-- 푸터 스타일 CSS-->
+
+    <script src="https://kit.fontawesome.com/ba16334cfd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="community_howMuch.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gowun+Batang&family=IBM+Plex+Sans+KR:wght@300&family=Jua&family=Nanum+Gothic:wght@700&family=Noto+Sans+KR:wght@400;600&family=Roboto&display=swap"
+        rel="stylesheet">
+    <script src="community.js"></script>
+</head>
+
+<body>
+    <div class="header"> 
+        <div class="headers">
+            <div class="logo_loggo">
+        
+                <!-- logo / 로고 -->
+                <div class="logo" onclick="location.href='http://192.168.0.36:5500/project/index/index.html'"
+                    style="cursor: pointer;"><img src="img/로고.png" width="140px" height="70px"></div>
+            </div>
+        
+            <!-- 로고 옆 gnb 커뮤니티,채팅 등등 -->
+            <div class="gnb">
+                <ul class="menu">
+                    <!-- 일을주마 -->
+                    <li>
+                        <a href="#">일을주마</a>
+                        <ul class="depth_1">
+                            <li><a href="#">견적요청</a></li>
+                        </ul>
+                    </li>
+                    <!-- 일을하마 -->
+                    <li>
+                        <a href="#">일을하마</a>
+                        <ul class="depth_1">
+                            <li><a href="#">요청게시판</a></li>
+                        </ul>
+                    </li>
+                    <!-- 커뮤니티 -->
+                    <li>
+                        <a href="#">커뮤니티</a>
+                    </li>
+                    <!-- 하마찾기 -->
+                    <li>
+                        <a href="#">하마찾기</a>
+                    </li>
+                </ul>
+            </div>
+        
+            <!-- 로그인,회원가입  -->
+            <div class="login_signup">
+                <div></div>
+                <div class="login" onclick="location.href='http://192.168.0.36:5500/project/login/login.html'"
+                    style="cursor: pointer;">받은요청</div>
+                <div class="login" onclick="location.href='http://192.168.0.36:5500/project/login/signup.html'"
+                    style="cursor: pointer;">보낸견적</div>
+                <div class="login" onclick="location.href='http://192.168.0.36:5500/project/login/signup.html'"
+                    style="cursor: pointer;">채팅</div>
+                <div class="login2" style="cursor: pointer;">
+                    <li>
+                        <a href="#"><i class="fa-solid fa-user"></i></i></a>
+                        <ul class="depth_1">
+                            <li>
+                                <p>회원관리</p>
+                            </li>
+                            <li><a href="#">하마신청</a></li>
+                            <li><a href="#">프로필등록</a></li>
+                            <li><a href="#">회원정보수정</a></li>
+                            <li><a href="#">회원탈퇴</a></li>
+                            <li>
+                                <p>하마전용</p>
+                            </li>
+                            <li><a href="#">포트폴리오</a></li>
+                        </ul>
+                    </li>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="containerWrap">
+            <!-- 사이드 메뉴 -->
+            <div class="commu_side">
+                <a href="test.html">
+                    <div class="side side_write"> 글작성 </div>
+                </a>
+                <a href="community.html">
+                    <div class="side side_whole"> 전체</div>
+                </a>
+                <a href="community_question.html">
+                    <div class="side side_question"> 궁금해요</div>
+                </a>
+                <a href="community_howMuch.html">
+                    <div class="side side_howMuch"> <i class="fa-solid fa-location-arrow"></i> 얼마에요</div>
+                </a>
+                <a href="community_gethering.html">
+                    <div class="side side_gethering"> 모여봐요</div>
+                </a>
+                <div class="side_searching_wrap">
+                    <input class="side side_searching" id="search1" type="text" placeholder="검색어 입력..." name="search2"></input>
+                    <button class="side side_searching" id="search2">검색</button>
+                </div>
+                <script>
+                    // 검색 버튼 클릭 이벤트 처리
+                    document.getElementById('search2').addEventListener('click', function () {
+                        // 검색어 입력란의 값을 가져옴
+                        var searchText = document.getElementById('search1').value;
+        
+                        // 검색어를 사용하여 원하는 동작을 수행 (예: 검색 결과 표시)
+                        alert('검색어: ' + searchText); // 여기에 실제 검색 로직을 추가하세요.
+                    });
+                </script>
+            </div>
+            <div class="main">
+                <!-- 커뮤니티 페이지 제목 -->
+                <div class="commu_title">
+                    <div id="title1">
+                        <h2>커뮤니티 > 얼마에요</h2>
+                        <div id="title2"><br>이건 얼마에요? 알려주세요!
+                        </div>
+                    </div>
+                </div>
+        
+        
+                <!-- 이용자 게시글 목록 -->
+                <div class="commu_content" id="content-container">
+                    <!-- 여기에 게시글이 동적으로 추가될 것입니다. -->
+                    <!-- <a href="test.html">
+                        <div class="content content1">
+                            <div class="content_photo"><img src="img/kermit.jpg"></div>
+                            <div class="content_title">게시글 제목</div>
+                            <div class="content_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum atque
+                                repudiandae quasi autem sint saepe nesciunt, hic temporibus minima eaque debitis, quia
+                                aliquam officia quas iusto libero impedit? Dolor, adipisci?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ullam voluptatem dolor beatae
+                                ipsa, aperiam nesciunt facere consequatur placeat ipsam libero commodi quaerat voluptatibus
+                                laudantium animi facilis ratione, aut repellendus.
+                                Eaque nihil id, vel quidem ullam rem architecto quam hic quisquam, odit nemo commodi ab!
+                                Consequatur iure cupiditate sed soluta modi maiores veritatis illo labore adipisci corporis!
+                                Ea, nam eos?
+                            </div>
+                            <div class="content_cnt">
+                                <div class="cnt_m">2023 - 09 - 01</div>
+                                <div class="cnt_wrap">
+                                    <div class="cnt_eye"><i class="fa-solid fa-eye"></i> 0</div>
+                                    <div class="cnt_re"><i class="fa-regular fa-comment-dots"></i> 0</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="test.html">
+                        <div class="content content2">
+                            <div class="content_photo"> <img src="img/image.png"></div>
+                            <div class="content_title">게시글 제목</div>
+                            <div class="content_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum atque
+                                repudiandae quasi autem sint saepe nesciunt, hic temporibus minima eaque debitis, quia
+                                aliquam officia quas iusto libero impedit? Dolor, adipisci?</div>
+                            <div class="content_cnt">
+                                <div class="cnt_m">2023 - 09 - 01</div>
+                                <div class="cnt_wrap">
+                                    <div class="cnt_eye"><i class="fa-solid fa-eye"></i> 0</div>
+                                    <div class="cnt_re"><i class="fa-regular fa-comment-dots"></i> 0</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="test.html">
+                        <div class="content content3">
+                            <div class="content_photo"><img src="img/image.png"></div>
+                            <div class="content_title">게시글 제목</div>
+                            <div class="content_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum atque
+                                repudiandae quasi autem sint saepe nesciunt, hic temporibus minima eaque debitis, quia
+                                aliquam officia quas iusto libero impedit? Dolor, adipisci?</div>
+                            <div class="content_cnt">
+                                <div class="cnt_m">2023 - 09 - 01</div>
+                                <div class="cnt_wrap">
+                                    <div class="cnt_eye"><i class="fa-solid fa-eye"></i> 0</div>
+                                    <div class="cnt_re"><i class="fa-regular fa-comment-dots"></i> 0</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a> -->
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="footer"> 푸터
+    </div>
+</body>
+
+</html>

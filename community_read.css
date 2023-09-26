@@ -1,0 +1,288 @@
+* {
+    /* outline: 1px solid green; */
+    margin: 0;
+    padding: 0;
+}
+
+/* 게시글 조회 페이지 바디 */
+.read_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 페이지 요소 전체 */
+.read_wrap {
+    width: 1004px;
+    padding: 10px;
+}
+
+/* 페이지 카테고리 */
+.read_category {
+    padding-left: 50px;
+    height: 100px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    font-weight: 200;
+}
+
+/* 조회 작성자 + 본문글 */
+.read_content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 게시글 제목 */
+.content_title {
+    padding: 20px 10px;
+    font-size: 1.2rem;
+}
+
+/* 작성자 프로필 : 사진 + 닉네임/날짜/조회수 + 메뉴 */
+.content_profile {
+    display: grid;
+    grid-template-areas:
+        'writerPhoto writerInfo menu';
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 80px;
+}
+
+/* 프로필1 : 사진 */
+.profile_1.photo {
+    grid-area: writerPhoto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 프로필2 : 닉네임/날짜/조회수 */
+.profile_2.writerInfo {
+    grid-area: writerInfo;
+    display: flex;
+    flex-direction: column;
+}
+#writerNick {
+    display: flex;
+    align-items: end;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    height: 50px;
+}
+.upLoad_Cnt {
+    display: flex;
+    flex-direction: row;
+}
+
+#uploadDate {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+#viewCnt {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    color: #666;
+}
+
+/* 프로필3 영역 */
+.profile_3.menu {
+    grid-area: menu;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* ... 버튼 */
+#wrapMenuBtn{
+    background-color: transparent;
+    color: #00B0FA;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    height: 30px;
+    margin-top: 5px;
+    font-size: 1.5rem;
+}
+#wrapMenuBtn:hover {
+    color: #0056b3;
+}
+/* | */
+#wrapMenuBar{
+    color: #00B0FA;
+    margin: 0 10px;
+}
+
+/* 수정하기, |, 삭제하기 */
+.menu #wrapMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #00B0FA;
+    padding: 5px 10px;
+    height: 30px;
+    width: 180px;
+}
+
+/* 수정하기 */
+#modifyBtn{
+    cursor: pointer;
+    width: 60px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+}
+
+/* 삭제하기 */
+#deleteBtn{
+    cursor: pointer;
+    width: 60px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+}
+
+/* 게시글 본문 */
+.content_text {
+    padding: 50px 100px;
+    font-size: 1rem;
+}
+
+/* 댓글창 전체 */
+.read_comment {
+    padding: 10px 50px;
+    margin-bottom: 50px;
+}
+
+.comment_bar {
+    border-top: 1px solid #00B0FA;
+    padding: 10px;
+}
+
+/* 등록된 댓글 : 사진 + 닉네임 + 지난시간 + 댓글 + 채팅버튼 */
+.comment_userItem {
+    display: grid;
+    grid-template-areas:
+        'userPhoto nick_time_cmt chatBtn';
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+.userItem_1 {
+    grid-area: userPhoto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userItem_2 {
+    grid-area: nick_time_cmt;
+    display: flex;
+    flex-direction: column;
+}
+
+.user_nick_time {
+    display: flex;
+    flex-direction: row;
+}
+
+#userNick {
+    margin: 10px;
+}
+
+#userCmtTime {
+    margin: 10px;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+#userCmt {
+    padding: 10px;
+    font-size: 0.8rem;
+}
+
+.userItem_3 {
+    grid-area: chatBtn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#chatBtn {
+    background-color: #00B0FA;
+    padding: 10px;
+    height: 20px;
+    width: 50px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    color: #fff;
+}
+
+#chatBtn:hover {
+    background-color: #0056b3;
+}
+
+/* 댓글 작성창 */
+.comment_writeBox {
+    margin-left: 20px;
+    margin-top: 30px;
+    display: grid;
+    grid-template-areas:
+        'myPhoto writeBox2 sendBtn';
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+.writeBox1 {
+    grid-area: myPhoto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.writeBox2 {
+    grid-area: writeBox2;
+}
+
+#myNick {
+    margin: 5px 0;
+}
+
+#myText {
+    width: 95%;
+    height: 80px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #00B0FA;
+}
+
+/* 댓글등록 버튼 영역 */
+.writeBox3 {
+    grid-area: sendBtn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+/* 댓글등록 버튼(비행기) */
+#sendBtn, #sendBtn i{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 1.8rem;
+    color: #00B0FA;
+}
+
+#sendBtn:hover i{
+    color: #0056b3;
+}
+
+/* 댓글 수 */
+#cmtCnt{
+    color: #00B0FA;
+    font-size: 0.8em;
+}

@@ -42,6 +42,4 @@ function toggleAllCheckboxes(checkbox) {
         });
     }
 }
-// 초기 상태에서 회원가입 버튼 비활성화
-signUpBtn.disabled = true;
 

@@ -1,0 +1,230 @@
+ * {
+    margin: 0;
+    padding: 0;
+   font-family: 'GowunBatang-Regular';
+   /* outline: 1px solid grey; */
+ }
+ .container{
+   display: grid;
+   grid-template-areas: '. main .';
+   grid-template-columns: 1fr 1024px 1fr;
+}
+.containerWrap{
+   
+   position: relative;
+   grid-area: main;
+   display: flex;
+   justify-content: center;
+   min-width: 1024px; /* 최소 너비를 설정하여 화면이 이 값 미만으로 줄어들지 않도록 함 */
+   padding-right: 220px;/* .commu_side의 너비만큼 오른쪽 패딩 추가 */
+}
+.commu_title{
+   /* 좌우 여백 추가 */
+   padding-top: 50px;
+   height: 100px;
+}
+ /* 페이지 전체 */
+ .main {
+    grid-area: _main;
+   }
+   
+   /* 페이지 제목 : 커뮤니티 */
+   .commu_title {
+    width: 1000PX;
+    height: 100px;
+ }
+
+
+ /* 게시글 본문 */
+ .content {
+    margin: 20px;
+    padding: 20px;
+    padding-bottom: 40px;
+    margin: 20px 0;
+    display: grid;
+    grid-template-areas:
+       'c_title c_title'
+       'c_photo c_text'
+       'c_photo c_cnt';
+       grid-template-columns: 1fr 4fr;
+    gap: 10px;
+    height: 180px;
+    border-bottom: 1px solid #ccc;
+    text-decoration: none;
+    
+ }
+
+ .commu_content a {
+    text-decoration: none;
+    color: #000;
+ }
+
+ /* 게시글 요소 */
+ .content_photo{
+display: flex;
+justify-content: center;
+
+ }
+ .content_photo img {
+    grid-area: c_photo;
+    width: 150px;
+    height: 150px;
+    /* border-radius: 50%; */
+    object-fit: fill;
+    overflow: hidden;
+    border-radius: 5px;
+ }
+
+ .content_title {
+    grid-area: c_title;
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    padding-left: 195px;
+ }
+
+ .content_text {
+    grid-area: c_text;
+    margin-bottom: 40px;
+    overflow: hidden;
+    padding-left: 20px;
+    height: 120px;
+    color: #666;
+ }
+
+ .content_cnt {
+    grid-area: c_cnt;
+    display: flex;
+    justify-content: space-between;
+    color: #ccc;
+    font-size: 0.9em;
+ }
+
+ .cnt_wrap {
+    display: flex;
+ }
+
+ .cnt_eye {
+    margin-right: 10px;
+ }
+
+ /* 페이지 사이드 고정 메뉴 */
+
+ .commu_side {
+   display: block;
+   position: fixed;
+   top: 180px;
+   left: 5%;
+    margin: 50px;
+    /* z-index: 1000; */
+    width: 200px;
+ }
+
+ .commu_side a {
+   color: #00B0FA;
+   text-decoration: none;
+ }
+ .side_whole:hover, .side_question:hover, .side_howMuch:hover, .side_gethering:hover{
+   color: #0056b3;
+ }
+
+
+/* 현재페이지 표시 */
+.side_gethering {
+   color: #0056b3;
+}
+
+/* side_whole 페이지 화살표 위치 */
+.side_gethering i {
+   margin-top: 1px;
+}
+
+ .side {
+    text-align: center;
+    width: 212.5px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .side:hover {
+    text-decoration: underline;
+ }
+
+ .side:hover a {
+    text-decoration: underline;
+    color: #0056b3;
+    font-weight: 800;
+ }
+
+ .side a {
+    text-decoration: none;
+    color: #00B0FA;
+ }
+
+ /* 글작성 버튼 */
+ .side_write {
+    background-color: #00B0FA;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    
+ }
+
+ .side_write:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+ }
+
+ /* 검색창 */
+ .side_searching {
+    border: 1px solid #eee;
+    cursor: pointer;
+    text-align: left;
+    
+ }
+.side_searching_wrap{ /* --------------------------- */
+   display: flex;
+}
+ #search1[type="text"] {
+   width: 150px;
+   height: 30px;
+   border: 1px solid #eee;
+   padding: 5px;
+   text-decoration: none; /* 입력란에 대한 밑줄 제거 */
+ }
+
+ #search1{
+   text-indent: 10px;
+      /* 오른쪽으로 10px 이동 */
+      cursor: auto;
+ }
+ #search1[type="text"]:hover {
+   border: 1px solid #00B0FA; /* hover 상태에서 테두리 색상 변경 */
+}
+
+#search2{
+   width: 50px;
+   height: 42px;
+   display: block; /* 블록 레벨 요소로 설정하여 가운데 정렬 적용 */
+   text-align: center;
+}
+
+/* 미디어 쿼리를 사용하여 800px 이하에서 적용할 스타일 정의 */
+@media screen and (max-width: 1700px) {
+
+   /* 사이드 메뉴 숨김 */
+   .commu_side {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+   }
+   .commu_side .side{
+      /* background-color: gold; */
+      width: 100px;
+      position: relative;
+      top: -110px;
+      right: -240px;
+   }
+}

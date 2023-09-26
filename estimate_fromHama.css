@@ -1,0 +1,214 @@
+*{
+  font-family: 'GowunBatang-Regular';
+  /* outline: 1px solid red; */
+}
+
+/* 메인바디 전체 */
+.container__wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 받은견적서 제목 + 안내문구 */
+.title__postlist_ask_hama {
+  grid-area: title__postlist_ask_hama;
+  padding-left: 80px; /* 좌우 여백 추가 */
+  padding-top: 30px;
+  width: 1000PX;
+  height: 100px;
+}
+
+.top__title__postlist_ask_hama
+{
+  display: grid;
+  grid-template-areas: ". title__postlist_ask_hama .";
+}
+.title__postlist_ask_hama h2{
+  padding-bottom: 20px;
+  font-weight: 900;
+}
+
+
+/* 받은 견적서 전체  */
+.postlist_ask_hama {
+  display: grid;
+  place-items: center;
+  max-height: auto;
+}
+.community__postlist_ask_hama {
+  width: 100%; /* 전체 너비를 차지하도록 설정 */
+  margin: 20px auto;
+  padding: 20px;
+  border-top: 1px solid #eee;
+  max-width: 1024px; /* 최대 너비 설정 유지 */
+}
+
+/* 받은 견적서 칸 별  */
+.post {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  max-height: 150px;
+  position: relative;
+}
+
+.post img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+/* 하마 닉네임 + 소개 + 위치 + 희망일 */
+.post-content {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  max-width: 700px;
+  min-width: 700px;
+  margin-left: 20px;
+}
+
+/* 하마 닉네임 */
+.post h3 {
+  margin-bottom: 10px;
+}
+
+.post-text {
+  font-size: 14px; /* 원하는 크기로 설정 */
+  max-height: 80px; /* 내용이 80px 이상이면 내용 숨김 */
+  overflow: auto;
+  min-height: 90px;
+  width: 550px;
+  margin-top: 5px;
+  padding: 0 15px;
+  color: #666;
+}
+
+/* 버튼 컨테이너 스타일 */
+.post .buttons {
+  display: flex;
+  flex-direction: column; /* 위아래 정렬 */
+  align-items: flex-end; /* 우측 정렬 */
+  gap: 5px; /* 버튼 사이의 간격 조절 */
+  margin-top: 10px; /* 버튼 위 여백 추가 */
+  position: absolute;
+  right: 20px;
+  bottom: 41px;
+}
+
+.detailBtn,
+.chattingBtn{
+  background-color: white;
+  border: 1px solid #00B0FA;
+  color: #0056b3;
+  font-size: 0.8em;
+}
+
+.detailBtn:hover,
+.chattingBtn:hover{
+  background-color: #00B0FA;
+  border: 1px solid #00B0FA;
+  color: white;
+}
+
+.user-info {
+display: flex;
+align-content: space-between;
+font-size: 12px;
+color: #666;
+margin-top: 10px;
+}
+
+.user-info p {
+margin: 0;
+margin-right: 100px;
+}  
+
+/* ------------------------------------ */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: white;
+  max-width: 80%;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.closePopup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* ----- 요청 마감--------- */
+/* 모달 배경까지 전체 배치 */
+#myModal {
+  display: none;
+  position: fixed;
+  /* 화면 중앙에 정렬되도록 설정 */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.modal-content{
+  background-color: #fff;
+  width: 500px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  left: calc(50% - (500px / 2));
+  top: calc(50% - (200px / 2));
+}
+
+#modalMention{
+  margin-bottom: 10px;
+}
+/* 모달 버튼 스타일 */
+#yesBtn,
+#noBtn {
+  background-color: #00B0FA;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+/* 모달 버튼 호버 스타일 */
+#yesBtn:hover,
+#noBtn:hover {
+  background-color: #0056b3;
+}
+

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>받은견적서_견적서리스트</title>
+    <script src="https://kit.fontawesome.com/bfabd822e0.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="../css/header.css">
+            <link rel="stylesheet" href="../css/footer_color.css">
+            <link rel="stylesheet" href="../css/footer_style.css"> -->
+    <link rel="stylesheet" href="./btn.css"> <!-- 버튼 css -->
+    <link rel="stylesheet" href="font.css"> <!-- 폰트 css -->
+    <link rel="stylesheet" href="header.css"> <!-- 헤더 CSS-->
+    <link rel="stylesheet" href="footer_color.css"> <!-- 푸터 컬러 CSS-->
+    <link rel="stylesheet" href="footer_style.css"> <!-- 푸터 스타일 CSS-->
+
+    <link rel="stylesheet" href="estimate_ask_summary.css"><!-- 내 요청서 간단히 CSS-->
+    <script src="./estimate_ask_summary.js"></script> <!-- 내 요청서 간단히 JS -->
+    <link rel="stylesheet" href="./estimate_ask_my.css"><!-- 내 견적 요청서 팝업 CSS-->
+    <link rel="stylesheet" href="./estimate_fromHama.css"><!-- 견적서 리스트 CSS -->
+    
+    <link rel="stylesheet" href="estimate_detailPopup.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gowun+Batang&family=IBM+Plex+Sans+KR:wght@300&family=Jua&family=Nanum+Gothic:wght@700&family=Noto+Sans+KR:wght@400;600&family=Roboto&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- header -->
+    
+    <div class="header">
+        <div class="headers">
+            <div class="logo_loggo">
+    
+                <!-- logo / 로고 -->
+                <div class="logo" onclick="location.href='http://192.168.0.36:5500/project/index/index.html'"
+                    style="cursor: pointer;"><img src="img/로고.png" width="140px" height="70px"></div>
+            </div>
+    
+            <!-- 로고 옆 gnb 커뮤니티,채팅 등등 -->
+            <div class="gnb">
+                <ul class="menu">
+                    <!-- 일을주마 -->
+                    <li>
+                        <a href="#">일을주마</a>
+                        <ul class="depth_1">
+                            <li><a href="#">견적요청</a></li>
+                        </ul>
+                    </li>
+                    <!-- 일을하마 -->
+                    <li>
+                        <a href="#">일을하마</a>
+                        <ul class="depth_1">
+                            <li><a href="#">요청게시판</a></li>
+                        </ul>
+                    </li>
+                    <!-- 커뮤니티 -->
+                    <li>
+                        <a href="#">커뮤니티</a>
+                    </li>
+                    <!-- 하마찾기 -->
+                    <li>
+                        <a href="#">하마찾기</a>
+                    </li>
+                </ul>
+            </div>
+    
+            <!-- 로그인,회원가입  -->
+            <div class="login_signup">
+                <div></div>
+                <div class="login" onclick="location.href='http://192.168.0.36:5500/project/login/login.html'"
+                    style="cursor: pointer;">받은요청</div>
+                <div class="login" onclick="location.href='http://192.168.0.36:5500/project/login/signup.html'"
+                    style="cursor: pointer;">보낸견적</div>
+                <div class="login" onclick="location.href='http://192.168.0.36:5500/project/login/signup.html'"
+                    style="cursor: pointer;">채팅</div>
+                <div class="login2" style="cursor: pointer;">
+                    <li>
+                        <a href="#"><i class="fa-solid fa-user"></i></i></a>
+                        <ul class="depth_1">
+                            <li>
+                                <p>회원관리</p>
+                            </li>
+                            <li><a href="#">하마신청</a></li>
+                            <li><a href="#">프로필등록</a></li>
+                            <li><a href="#">회원정보수정</a></li>
+                            <li><a href="#">회원탈퇴</a></li>
+                            <li>
+                                <p>하마전용</p>
+                            </li>
+                            <li><a href="#">포트폴리오</a></li>
+                        </ul>
+                    </li>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    <div class="container__wrap">
+        <div class="top__title__postlist_ask_hama">
+            <div class="title__postlist_ask_hama">
+                <h2>받은 견적서</h2>
+                <h4>‘하마’님께서 보낸 견적서 목록입니다. </h4>
+            </div>
+        </div>
+        <!-- 견적 요청서 요약 -->
+        <div class="title__postlist_ask_hama_summary">
+            <script src="./estimate_ask_summary.js"></script> <!-- 요청서 내용 간단히 JS -->
+        </div>
+        <div class="postlist_ask_hama">
+            <section class="community__postlist_ask_hama">
+                <!-- 받은 견적서 게시글 불러오는 부분. -->
+                <ul class="post-list" id="postList">
+                </ul>
+                <!-- 견적서 상세보기 조회 -->
+                <ul class="wrap_box">
+                </ul>
+            </section>
+            <script src="estimate_fromHama.js"></script> <!-- 하마가 보낸 견적서 리스트 -->
+        </div>
+    </div>
+
+    <!-- 푸터시작 -->
+    <div class="footer">
+
+        <!--푸터 바디-->
+        <div class="footer__body">
+
+            <!--이용약관 개인정보처리방침 자주묻는질문 공지사항 광고문의-->
+
+            <div class="menu__footer">
+                <p><a href="#">이용약관</a></p>
+                <p><a href="#">개인정보처리방침</a></p>
+                <p><a href="#">자주 묻는 질문</a></p>
+                <p><a href="#">공지사항</a></p>
+                <p><a href="#">광고문의</a></p>
+            </div>
+
+
+            <!--푸터 바디 속 컨텐츠 시작-->
+            <div class="footer__content">
+
+                <!--박스1-->
+                <div class="footer__content3">
+                    <p class="title">사업자 등록번호 : 111-77-123456</p>
+                    <p>우아한하마들(주) 대표팀장 정인수</p>
+                    <p>개인정보관리책임자:정인수</p>
+                </div>
+
+                <!--박스2-->
+                <div class="footer__content4">
+                    <p>평일:오전 10:00 ~ 오후 18:00</p>
+                    <p>점심:오후 12:00 ~ 오후 13:00</p>
+                    <p>토/일/공휴일 휴무</p>
+                    <p>TEL : 123-456-7890</p>
+                </div>
+
+            </div><!--푸터 바디 속 컨텐츠 끝-->
+
+            <!--카피라이트-->
+            <div class="footer__copyright">
+                COPYRIGHT ⓒ 우아한하마들(주) COMPANY. ALL RIGHTS RESERVED.
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 모달 -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <p>요청을 마감하시겠습니까?</p>
+            <p id="modalMention">(견적서를 더이상 받을 수 없습니다.)</p>
+            <button id="yesBtn">네, 더이상 받지 않아요.</button>
+            <button id="noBtn">아니요. 계속 받을래요.</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

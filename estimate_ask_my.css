@@ -1,0 +1,137 @@
+*{
+    font-family: 'GowunBatang-Regular';
+    padding: 0; margin: 0;
+    /* outline: 1px solid rebeccapurple; */
+    border: none;
+}
+
+/* 내 견적요청서 팝업창 */
+.estimate_ask_my_wrap{
+    width: 800px;
+    padding: 40px;
+    text-align: center;
+    border: none;
+}
+
+/* 팝업창 제목 */
+.my_h3{
+    font-size: 1.5rem;
+    margin: 20px 0;
+    margin-bottom: 40px;
+}
+
+/* 팝업창 내용 */
+.estimate_ask_my_content{
+    display: grid;
+    grid-template-areas: 
+    'my_grid1 my_grid2 my_grid3 my_grid3'
+    'my_grid1 my_grid4 my_grid5 my_grid6';
+    grid-template-columns: 0.8fr 1.1fr 1fr 1.2fr;
+    grid-template-rows: 2.5fr 0.8fr;
+    gap: 20px 10px;
+    margin: 10px 0;
+    font-size: 0.8em;
+}
+
+/* 내 사진 */
+.my_grid1{
+    grid-area: my_grid1;
+    border: 1px solid #eee;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 닉네임 */
+.my_grid2{
+    grid-area: my_grid2;
+    font-weight: bold;
+    display: flex;
+    font-size: 1.4em;
+}
+
+/* 희망사항 */
+.my_grid3{
+    display: flex;
+    grid-area: my_grid3;
+}
+    #my_grid3_1{
+        width: 120px;
+        height: auto;
+        font-weight: bold;
+    }
+    #my_grid3_2{
+        width: 550px;
+        height: 100px;
+        overflow: auto;
+        text-align:start;
+        padding: 0 10px;
+        color: #666;
+    }
+
+/* 서비스 분야 */
+.my_grid4{
+    display: flex;
+    grid-area: my_grid4;
+}
+    #my_grid4_1{
+        margin-right: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+    #my_grid4_2{
+        color: #666;
+    }
+    
+    /* 서비스 지역 */
+.my_grid5{
+    display: flex;
+    grid-area: my_grid5;
+}
+    #my_grid5_1{
+        margin-right: 15px;
+        margin-left:5px;
+        font-weight: bold;
+        text-align: left;
+    }
+    #my_grid5_2{
+        color: #666;
+        text-align: left;
+    }
+    
+    /* 견적 요청일 */
+.my_grid6{
+    display: flex;
+    grid-area: my_grid6;
+}
+    #my_grid6_1{
+        margin-right: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+    #my_grid6_2{
+            color: #666;
+        }
+
+/* 수정 버튼 */
+.modifyBtn{
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+.modifyBtn a {
+    text-decoration: none;
+    border-radius: 3px;
+    background-color: #00B0FA;
+    color: white;
+    width: 80px;
+    height: 25px;
+    margin-right:20px;  /* 수정버튼 좌우 위치 */
+    padding-top: 5px;
+    font-size: 0.8em;
+}
+.modifyBtn a:hover{
+    background-color: #0056B3;
+}

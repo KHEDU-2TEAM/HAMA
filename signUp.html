@@ -6,23 +6,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
     <link
-    href="https://fonts.googleapis.com/css2?family=Gowun+Batang&family=IBM+Plex+Sans+KR:wght@300&family=Jua&family=Nanum+Gothic:wght@700&family=Noto+Sans+KR:wght@400;600&family=Roboto&display=swap"
-    rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Gowun+Batang&family=IBM+Plex+Sans+KR:wght@300&family=Jua&family=Nanum+Gothic:wght@700&family=Noto+Sans+KR:wght@400;600&family=Roboto&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/ba16334cfd.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="signUp.css">
+    <link rel="stylesheet" href="./btn.css"> <!-- 버튼 css -->
+    <link rel="stylesheet" href="font.css"> <!-- 폰트 css -->
+    <link rel="stylesheet" href="header.css"> <!-- 헤더 CSS-->
+    <link rel="stylesheet" href="footer_color.css"> <!-- 푸터 컬러 CSS-->
+    <link rel="stylesheet" href="footer_style.css"> <!-- 푸터 스타일 CSS-->
+    <link rel="stylesheet" href="signUp.css"> <!-- 회원가입 JS -->
     <script src="signUp.js"></script>
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.4.0/kakao.min.js"
+        integrity="sha384-mXVrIX2T/Kszp6Z0aEWaA8Nm7J6/ZeWXbL8UpGRjKwWe56Srd/iyNmWMBhcItAjH"
+        crossorigin="anonymous"></script> <!-- 카카오톡 가입 SDK 통합 -->
+    <script>
+        // Kakao SDK 초기화
+        window.Kakao.init("여기에_애플리케이션_키_입력");
+
+        // Kakao 로그인 버튼 클릭 시 실행될 함수
+        function kakaoLogin() {
+            window.Kakao.Auth.login({
+                scope: 'profile_nickname, account_email',
+                success: function (authObj) {
+                    console.log(authObj);
+                    // 사용자 정보를 가져와서 처리할 수 있습니다.
+                }
+            });
+        }
+    </script>
+
 </head>
 
 <body>
+
+
+    <!-- header -->
     <div class="header">
-        <div class="banner"></div>
-        <div class="gnb"></div>
+        <div class="headers">
+            <div class="logo_loggo">
+
+                <!-- logo / 로고 -->
+                <div class="logo" onclick="location.href='http://192.168.0.36:5500/project/index/index.html'"
+                    style="cursor: pointer;"><img src="img/로고.png" width="140px" height="70px"></div>
+            </div>
+
+            <!-- 로고 옆 gnb 커뮤니티,채팅 등등 -->
+            <div class="gnb">
+                <ul class="menu">
+                    <!-- 일을주마 -->
+                    <li>
+                        <a href="#">일을주마</a>
+                        <ul class="depth_1">
+                            <li><a href="#">견적요청</a></li>
+                        </ul>
+                    </li>
+                    <!-- 일을하마 -->
+                    <li>
+                        <a href="#">일을하마</a>
+                        <ul class="depth_1">
+                            <li><a href="#">요청게시판</a></li>
+                        </ul>
+                    </li>
+                    <!-- 커뮤니티 -->
+                    <li>
+                        <a href="#">커뮤니티</a>
+                    </li>
+                    <!-- 하마찾기 -->
+                    <li>
+                        <a href="#">하마찾기</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 로그인,회원가입  -->
+            <div class="login_signup">
+                <div></div>
+                <div class="login" onclick="location.href='http://192.168.0.36:5500/project/login/login.html'"
+                    style="cursor: pointer;">받은요청</div>
+                <div class="login" onclick="location.href='http://192.168.0.36:5500/project/login/signup.html'"
+                    style="cursor: pointer;">보낸견적</div>
+                <div class="login" onclick="location.href='http://192.168.0.36:5500/project/login/signup.html'"
+                    style="cursor: pointer;">채팅</div>
+                <div class="login2" style="cursor: pointer;">
+                    <li>
+                        <a href="#"><i class="fa-solid fa-user"></i></i></a>
+                        <ul class="depth_1">
+                            <li>
+                                <p>회원관리</p>
+                            </li>
+                            <li><a href="#">하마신청</a></li>
+                            <li><a href="#">프로필등록</a></li>
+                            <li><a href="#">회원정보수정</a></li>
+                            <li><a href="#">회원탈퇴</a></li>
+                            <li>
+                                <p>하마전용</p>
+                            </li>
+                            <li><a href="#">포트폴리오</a></li>
+                        </ul>
+                    </li>
+                </div>
+
+            </div>
+        </div>
     </div>
-    <div class="main">
-        <div class="title">
+    <div class="sign__main">
+        <div class="sign__title">
             <h2>회&nbsp;&nbsp;&nbsp;&nbsp;원&nbsp;&nbsp;&nbsp;&nbsp;가&nbsp;&nbsp;&nbsp;&nbsp;입</h2>
         </div>
-        <div class="container">
+        <div class="sign__container">
             <div class="forms">
                 <div class="form nickname">
                     <h5>닉네임</h5>
@@ -77,62 +168,79 @@
             <div class="buttons">
                 <div class="btn sign" id="signUp" type="submit" value="회원가입"> <a href="test.html">회원가입</a>
                 </div>
-                <div class="btn kakao">카카오로 가입하기</div>
+
+
+                    <!-- <div class="btn kakao" id="kakao-login-btn"> 카카오톡으로 간편 가입</div> -->
+                <div class="col-lg-12 text-center mt-3 ">
+                    <!-- <button class="btn btn-block waves-effect waves-light btn-rounded btn-outline-info mb-3"></button> -->
+                    <img alt="카카오로그인" src="https://developers.kakao.com/tool/resource/static/img/button/kakaosync/complete/ko/kakao_login_medium_wide.png"
+                        onclick="loginWithKakao()">
+                </div>
+                
+                <!-- 카카오 로그인 -->
+                <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js" charset="utf-8"></script>
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        Kakao.init('e5aa9c905ccd14d66dac1eb3245e2571');
+                        Kakao.isInitialized();
+                    });
+
+                    function loginWithKakao() {
+                        Kakao.Auth.authorize({
+                            redirectUri: 'http://localhost:5501/kakao_callback'
+                        }); // 등록한 리다이렉트uri 입력
+                    }
+                </script>
             </div>
 
         </div>
     </div>
+    <!-- 푸터시작 -->
     <div class="footer">
-        <div class="footer_top">
-            <!-- 푸터 위쪽 고객센터, 회사정보 -->
-            <!-- 고객센터 part1 -->
-            <div class="item2">
-                <p class="cuscenter"><strong>고객센터</strong></p>
-                <ul class="policy">
-                    <li><a href="http://192.168.0.182:5500/project/customer/board.html">공지사항</a></li>
-                    <li><a href="#">1:1문의</a></li>
-                    <li><a href="http://192.168.0.182:5500/project/customer/question.html">자주묻는질문</a></li>
-                    <li><a href="#">우주하마</a></li>
-                </ul>
-            </div>
-            <!-- 고객센터 part2 -->
-            <div class="item3">
-                <div class="text3_box1">
-                    <p><strong>&nbsp;</strong></p>
-                </div>
-                <div class="text3_box2">
-                    평일 : 오전9:00~ 오후18:00<br>
-                    점심 : 오후12:00~ 오후13:00 토/일/공휴일 휴무</div>
-                <div class="text3_box3">
-                    <i class="fa-solid fa-phone"></i>
-                    <strong>070-1234-5678</strong>
-                </div>
-                <div class="text3_box4">
-                    국민은행 : 015-13413-123-01 (예금주 : 홍길동)<br>
-                    농협은행 : 15413-123-01 (예금주 : 홍길동)</div>
-            </div>
-            <!-- 회사정보 -->
-            <div class="item4">
-                <p><strong>회사정보</strong></p>
-                TEL:070-1234-5678 E-MAIL : WEBMASTER@HOTMAIL.COM<br>
-                ADDRESS1 : 서울 서초구 양재동 147-15번지 떡잎물산 418호<br>
-                BUSINESS LICENSE : 417-24-78612<br>
-                MAIL ORDER LICENSE : 제2022-서울서초-0817호
-                <br>
-                PERSONAL INFO MANAGER : 강감찬
 
-            </div>
-        </div>
-        <!-- 푸터 아래쪽 -->
-        <div class="footer_bot">
-            <!-- 맨 밑 문구 -->
-            <div class="item6">
-                <p>COPYRIGHTⓒ AIRMALL ALL RIGHT RESERVERD.DESIGNED BY TESTKOREA DESIGN 3.0 VERSION.
+        <!--푸터 바디-->
+        <div class="footer__body">
 
-                </p>
+            <!--이용약관 개인정보처리방침 자주묻는질문 공지사항 광고문의-->
+
+            <div class="menu__footer">
+                <p><a href="#">이용약관</a></p>
+                <p><a href="#">개인정보처리방침</a></p>
+                <p><a href="#">자주 묻는 질문</a></p>
+                <p><a href="#">공지사항</a></p>
+                <p><a href="#">광고문의</a></p>
             </div>
+
+
+            <!--푸터 바디 속 컨텐츠 시작-->
+            <div class="footer__content">
+
+                <!--박스1-->
+                <div class="footer__content3">
+                    <p class="title">사업자 등록번호 : 111-77-123456</p>
+                    <p>우아한하마들(주) 대표팀장 정인수</p>
+                    <p>개인정보관리책임자:정인수</p>
+                </div>
+
+                <!--박스2-->
+                <div class="footer__content4">
+                    <p>평일:오전 10:00 ~ 오후 18:00</p>
+                    <p>점심:오후 12:00 ~ 오후 13:00</p>
+                    <p>토/일/공휴일 휴무</p>
+                    <p>TEL : 123-456-7890</p>
+                </div>
+
+            </div><!--푸터 바디 속 컨텐츠 끝-->
+
+            <!--카피라이트-->
+            <div class="footer__copyright">
+                COPYRIGHT ⓒ 우아한하마들(주) COMPANY. ALL RIGHTS RESERVED.
+            </div>
+
         </div>
     </div>
+
+
 </body>
 
 </html>

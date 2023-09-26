@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글 조회</title>
+    <link rel="stylesheet" href="./btn.css"> <!-- 버튼 css -->
+    <link rel="stylesheet" href="font.css"> <!-- 폰트 css -->
+    <link rel="stylesheet" href="header.css"> <!-- 헤더 CSS-->
+    <link rel="stylesheet" href="footer_color.css"> <!-- 푸터 컬러 CSS-->
+    <link rel="stylesheet" href="footer_style.css"> <!-- 푸터 스타일 CSS-->
+
+    <link rel="stylesheet" href="community_read.css">
+    <script src="https://kit.fontawesome.com/ba16334cfd.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gowun+Batang&family=IBM+Plex+Sans+KR:wght@300&family=Jua&family=Nanum+Gothic:wght@700&family=Noto+Sans+KR:wght@400;600&family=Roboto&display=swap"
+        rel="stylesheet">
+    <script src="community.js"></script>
+    <script src="community_read.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="headers">
+            <div class="logo_loggo">
+
+                <!-- logo / 로고 -->
+                <div class="logo" onclick="location.href='http://192.168.0.36:5500/project/index/index.html'"
+                    style="cursor: pointer;"><img src="img/로고.png" width="140px" height="70px"></div>
+            </div>
+
+            <!-- 로고 옆 gnb 커뮤니티,채팅 등등 -->
+            <div class="gnb">
+                <ul class="menu">
+                    <!-- 일을주마 -->
+                    <li>
+                        <a href="#">일을주마</a>
+                        <ul class="depth_1">
+                            <li><a href="#">견적요청</a></li>
+                        </ul>
+                    </li>
+                    <!-- 일을하마 -->
+                    <li>
+                        <a href="#">일을하마</a>
+                        <ul class="depth_1">
+                            <li><a href="#">요청게시판</a></li>
+                        </ul>
+                    </li>
+                    <!-- 커뮤니티 -->
+                    <li>
+                        <a href="#">커뮤니티</a>
+                    </li>
+                    <!-- 하마찾기 -->
+                    <li>
+                        <a href="#">하마찾기</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 로그인,회원가입  -->
+            <div class="login_signup">
+                <div></div>
+                <div class="login" onclick="location.href='http://192.168.0.36:5500/project/login/login.html'"
+                    style="cursor: pointer;">받은요청</div>
+                <div class="login" onclick="location.href='http://192.168.0.36:5500/project/login/signup.html'"
+                    style="cursor: pointer;">보낸견적</div>
+                <div class="login" onclick="location.href='http://192.168.0.36:5500/project/login/signup.html'"
+                    style="cursor: pointer;">채팅</div>
+                <div class="login2" style="cursor: pointer;">
+                    <li>
+                        <a href="#"><i class="fa-solid fa-user"></i></i></a>
+                        <ul class="depth_1">
+                            <li>
+                                <p>회원관리</p>
+                            </li>
+                            <li><a href="#">하마신청</a></li>
+                            <li><a href="#">프로필등록</a></li>
+                            <li><a href="#">회원정보수정</a></li>
+                            <li><a href="#">회원탈퇴</a></li>
+                            <li>
+                                <p>하마전용</p>
+                            </li>
+                            <li><a href="#">포트폴리오</a></li>
+                        </ul>
+                    </li>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="read_container">
+        <div class="read_wrap">
+            <div class="read_category">
+                <div>커뮤니티 > 궁금해요</div>
+            </div>
+            <div class="read_content">
+                <div class="content_title">
+                </div>
+                <div class="content_profile">
+                    <div class="profile_1 photo"></div>
+                    <div class="profile_2 writerInfo">
+                        <div id="writerNick"></div>
+                        <div class="upLoad_Cnt">
+                            <span id="uploadDate"></span>
+                            <div id="viewCnt"><i class="fa-solid fa-eye" style="color: #cccccc;"></i><span>(조회수)</span></div>
+                        </div>
+                    </div>
+                    <div class="profile_3 menu">
+                        <div id="wrapMenu">
+                            <button id="modifyBtn">수정하기</button>
+                            <span id="wrapMenuBar">|</span>
+                            <button id="deleteBtn">삭제하기</button>
+                        </div>
+                    <button id="wrapMenuBtn"><i class="fa-solid fa-ellipsis";></i></button></div>
+                </div>
+                <div class="content_text">
+                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur exercitationem odit delectus quod, excepturi qui eum architecto totam rem facere nostrum deserunt, sunt, similique corrupti nihil fugiat nulla maiores. Assumenda.
+                    Exercitationem odit omnis dicta commodi quo officia cupiditate fugiat unde saepe, ipsam, at nulla repellendus? Quia quod eaque soluta et tempora assumenda maiores error, harum nesciunt nostrum dolore blanditiis modi.
+                    Veniam deleniti dignissimos numquam praesentium ut voluptatibus fugiat alias dolorem deserunt earum odit sit tenetur atque rem fugit suscipit soluta molestias, quidem, facere autem! Libero quibusdam hic cum sapiente veritatis.
+                    Ratione error est eum sint reiciendis animi ad fuga ullam nihil sed voluptas doloremque dolor architecto, similique, earum enim ipsa cumque, repellat mollitia ut. Iusto dolores voluptate vero ex aliquam?
+                    Vitae amet est delectus molestias, iste deleniti perspiciatis illum. Exercitationem illo libero, sit architecto reprehenderit facilis totam incidunt laudantium, nobis mollitia magnam dolores velit quam saepe fugit sint doloribus impedit.</div>
+                </div>
+            </div>
+            <div class="read_comment">
+                <div class="comment_bar">
+                    <div><i class="fa-solid fa-comments" style="color: #cccccc;"></i> 댓글 <span id="cmtCnt">(댓글수)</span></div>
+                </div>
+                <div class="comment_userItem">
+                    <div class="userItem_1 userPhoto">사진</div>
+                    <div class="userItem_2 nick_time_cmt">
+                        <div class="user_nick_time">
+                            <span id="userNick"> 스탠리 킴</span>
+                            <div id="userCmtTime"> 업로드 시간</div>
+                        </div>
+                        <div id="userCmt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptatum nobis alias blanditiis aliquam! Reiciendis quae quisquam laborum inventore! Eius amet voluptate quis eos recusandae nulla veniam, blanditiis quae maxime.</div>
+                    </div>
+                    <div class="userItem_3 chatBtn">
+                        <a href="test.html"><div id="chatBtn">채팅하기</div></a>
+                    </div>
+                </div>
+                <div class="comment_writeBox">
+                    <div class="writeBox1 myPhoto">사진</div>
+                    <div class="writeBox2">
+                        <div id="myNick">사용자 닉네임</div>
+                        <input id="myText" placeholder="댓글을 입력해주세요"></input>
+                    </div>
+                    <div class="writeBox3">
+                    <button id="sendBtn"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 푸터시작 -->
+    <div class="footer">
+
+        <!--푸터 바디-->
+        <div class="footer__body">
+
+            <!--이용약관 개인정보처리방침 자주묻는질문 공지사항 광고문의-->
+
+            <div class="menu__footer">
+                <p><a href="#">이용약관</a></p>
+                <p><a href="#">개인정보처리방침</a></p>
+                <p><a href="#">자주 묻는 질문</a></p>
+                <p><a href="#">공지사항</a></p>
+                <p><a href="#">광고문의</a></p>
+            </div>
+
+
+            <!--푸터 바디 속 컨텐츠 시작-->
+            <div class="footer__content">
+
+                <!--박스1-->
+                <div class="footer__content3">
+                    <p class="title">사업자 등록번호 : 111-77-123456</p>
+                    <p>우아한하마들(주) 대표팀장 정인수</p>
+                    <p>개인정보관리책임자:정인수</p>
+                </div>
+
+                <!--박스2-->
+                <div class="footer__content4">
+                    <p>평일:오전 10:00 ~ 오후 18:00</p>
+                    <p>점심:오후 12:00 ~ 오후 13:00</p>
+                    <p>토/일/공휴일 휴무</p>
+                    <p>TEL : 123-456-7890</p>
+                </div>
+
+            </div><!--푸터 바디 속 컨텐츠 끝-->
+
+            <!--카피라이트-->
+            <div class="footer__copyright">
+                COPYRIGHT ⓒ 우아한하마들(주) COMPANY. ALL RIGHTS RESERVED.
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -20,8 +20,8 @@
         }
 
         /* 전체 메인 */
-        .main {
-            padding: 100px;
+        .sign__main {
+            padding: 50px 100px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -29,16 +29,16 @@
         }
 
         /* 회원가입 텍스트 상자 */
-        .main .title {
+        .sign__main .sign__title {
             padding: 20px;
             text-align: center;
         }
 
         /* 닉네임+이메일+비밀번호+재확인 */
-        .main .forms {
+        .sign__main .forms {
             padding: 20px;
             margin: 30px;
-            margin-top: 10px;
+            margin-top: 0;
             display: flex;
             flex-direction: column;
         }
@@ -54,7 +54,7 @@
         }
 
         /* #00B0FA 선 상자 */
-        .container {
+        .sign__container {
             outline: 1px solid #00B0FA;
             border-radius: 5%;
             padding: 60px 20px;
@@ -82,20 +82,21 @@
         }
 
         /* 약관(전체+개별) */
-        .main .check {
+        .sign__main .check {
             padding-left: 50px;
             padding-right: 30px;
+            margin-bottom: 20px;
             display: flex;
             flex-direction: column;
         }
 
         /* 전체 약관 */
-        .main .check .all {
+        .sign__main .check .all {
             margin: 5px;
         }
 
         /* 개별 약관 */
-        .main .check .each {
+        .sign__main .check .each {
             margin: 10px;
             margin-top: 5px;
             margin-left: 15px;
@@ -111,16 +112,17 @@
         }
 
         /* 버튼 자리 */
-        .main .buttons {
+        .sign__main .buttons {
             display: flex;
             flex-direction: column;
             text-align: center;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
         }
 
         /* 회원가입 + 카카오가입 버튼 */
-        .main .buttons .btn, #signUp a,
+        .sign__main .buttons .btn, #signUp a,
         .btn_kakao {
             height: 50px;
             width: 400px;
@@ -137,7 +139,7 @@
             justify-content: center;
             align-items: center;
         }
-        .main .buttons .btn:hover,
+        .sign__main .buttons .btn:hover,
         .btn_kakao:hover{
             outline: 1px solid #2A2F57;
         }
